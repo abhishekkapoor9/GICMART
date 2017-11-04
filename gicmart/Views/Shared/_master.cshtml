@@ -7,6 +7,148 @@
     <title>GIC MART</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/scripts")
+    <style type="text/css">
+        /* Clearing floats */
+        .cf:before,
+        .cf:after {
+            content: " ";
+            display: table;
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        .cf {
+            *zoom: 1;
+        }
+
+        /* Mini reset, no margins, paddings or bullets */
+        .menu,
+        .submenu {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Main level */
+        .menu {
+          margin: 24px auto;
+    margin-left: auto;
+width: 800px;
+width: -moz-fit-content;
+width: -webkit-fit-content;
+width: fit-content;
+margin-left: 4%;
+        }
+
+            .menu > li {
+                background: #34495e;
+                float: left;
+                position: relative;
+                transform: skewX(25deg);
+            }
+
+            .menu a {
+                display: block;
+                color: #fff;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-family: Arial, Helvetica;
+                font-size: 14px;
+            }
+
+            .menu li:hover {
+                background: #e74c3c;
+            }
+
+            .menu > li > a {
+                transform: skewX(-25deg);
+                padding: 1em 2em;
+            }
+
+        /* Dropdown */
+        .submenu {
+            position: absolute;
+            width: 200px;
+            left: 50%;
+            margin-left: -100px;
+            transform: skewX(-25deg);
+            transform-origin: left top;
+        }
+
+            .submenu li {
+                background-color: #34495e;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .submenu > li > a {
+                padding: 1em 2em;
+            }
+
+            .submenu > li::after {
+                content: '';
+                position: absolute;
+                top: -125%;
+                height: 100%;
+                width: 100%;
+                box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+            }
+
+            /* Odd stuff */
+            .submenu > li:nth-child(odd) {
+                transform: skewX(-25deg) translateX(0);
+            }
+
+                .submenu > li:nth-child(odd) > a {
+                    transform: skewX(25deg);
+                }
+
+                .submenu > li:nth-child(odd)::after {
+                    right: -50%;
+                    transform: skewX(-25deg) rotate(3deg);
+                }
+
+            /* Even stuff */
+            .submenu > li:nth-child(even) {
+                transform: skewX(25deg) translateX(0);
+            }
+
+                .submenu > li:nth-child(even) > a {
+                    transform: skewX(-25deg);
+                }
+
+                .submenu > li:nth-child(even)::after {
+                    left: -50%;
+                    transform: skewX(25deg) rotate(3deg);
+                }
+
+            /* Show dropdown */
+            .submenu,
+            .submenu li {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+                .submenu li {
+                    transition: .2s ease transform;
+                }
+
+        .menu > li:hover .submenu,
+        .menu > li:hover .submenu li {
+            opacity: 1;
+            visibility: visible;
+        }
+
+            .menu > li:hover .submenu li:nth-child(even) {
+                transform: skewX(25deg) translateX(15px);
+            }
+
+            .menu > li:hover .submenu li:nth-child(odd) {
+                transform: skewX(-25deg) translateX(-15px);
+            }
+    </style>
     <script type="application/x-javascript">
         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
                function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -71,13 +213,26 @@
 
         <div class="header-three">
             <!-- header-three -->
-            <div class="container">
+            <div class="container" style="padding: 0px;margin-left: 4%;width: 94%;"> 
                 <div class="header-logo">
                     <h1><a href="~/Images/index-2.html"><span>G</span>ic <i>Mart</i></a></h1>
                     <h6>Your stores. Your place.</h6>
                 </div>
-                <div class="move-text">
-                </div>
+                <ul class="menu cf" style="z-index:9999">
+                    <li><a href="">Home</a></li>
+                    <li style="z-index:9999">
+                        <a href="">About Us</a>
+                        <ul class="submenu" style="z-index:9999">
+                            <li><a href="">Business Plan</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Legal</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Product Gallery</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Register</a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -91,7 +246,7 @@
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <!-- First-Slide -->
-                    <img src="~/Images/5.jpg" alt="" class="img-responsive" />
+                    <img src="~/Images/2.jpg" alt="" class="img-responsive" />
                     <div class="carousel-caption kb_caption kb_caption_right">
                         <h3 data-animation="animated flipInX">Flat <span>50%</span> Discount</h3>
                         <h4 data-animation="animated flipInX">Hot Offer Today Only</h4>
@@ -99,7 +254,7 @@
                 </div>
                 <div class="item">
                     <!-- Second-Slide -->
-                    <img src="~/Images/8.jpg" alt="" class="img-responsive" />
+                    <img src="~/Images/4.jpg" alt="" class="img-responsive" />
                     <div class="carousel-caption kb_caption kb_caption_right">
                         <h3 data-animation="animated fadeInDown">Our Latest Fashion Editorials</h3>
                         <h4 data-animation="animated fadeInUp">cupidatat non proident</h4>
@@ -204,7 +359,7 @@
             <div class="footer-info w3-agileits-info">
                 <div class="col-md-4 address-left agileinfo">
                     <div class="footer-logo header-logo">
-                        <h2><a href="index-2.html"><span>S</span>mart <i>Bazaar</i></a></h2>
+                        <h2><a href="index-2.html"><span>G</span>ic <i>Mart</i></a></h2>
                         <h6>Your stores. Your place.</h6>
                     </div>
                     <ul>
