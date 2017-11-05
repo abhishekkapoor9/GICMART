@@ -1,52 +1,3 @@
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\gicmart.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\gicmart.pdb
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\Antlr3.Runtime.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.AspNet.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.Core.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.OAuth.Consumer.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.OAuth.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.OpenId.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\EntityFramework.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\Microsoft.Web.Infrastructure.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\Microsoft.Web.WebPages.OAuth.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\Newtonsoft.Json.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Net.Http.Formatting.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Helpers.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Http.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Http.WebHost.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Mvc.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Optimization.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Razor.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.WebPages.Deployment.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.WebPages.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.WebPages.Razor.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\WebGrease.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\WebMatrix.Data.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\WebMatrix.WebData.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\EntityFramework.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\Newtonsoft.Json.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Net.Http.Formatting.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Helpers.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Http.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Http.WebHost.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Mvc.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.Razor.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.WebPages.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.WebPages.Deployment.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\System.Web.WebPages.Razor.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\WebMatrix.Data.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\Microsoft.Web.WebPages.OAuth.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\WebMatrix.WebData.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.AspNet.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.Core.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.OAuth.Consumer.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.OAuth.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.OpenId.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\obj\Debug\gicmart.csprojResolveAssemblyReference.cache
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\obj\Debug\gicmart.dll
-c:\users\abc\documents\visual studio 2012\Projects\gicmart\gicmart\obj\Debug\gicmart.pdb
 F:\gicmart\GICMART\gicmart\bin\gicmart.dll
 F:\gicmart\GICMART\gicmart\bin\gicmart.pdb
 F:\gicmart\GICMART\gicmart\bin\Antlr3.Runtime.dll
@@ -93,6 +44,5 @@ F:\gicmart\GICMART\gicmart\bin\DotNetOpenAuth.OAuth.Consumer.xml
 F:\gicmart\GICMART\gicmart\bin\DotNetOpenAuth.OAuth.xml
 F:\gicmart\GICMART\gicmart\bin\DotNetOpenAuth.OpenId.xml
 F:\gicmart\GICMART\gicmart\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-F:\gicmart\GICMART\gicmart\obj\Debug\gicmart.csprojResolveAssemblyReference.cache
 F:\gicmart\GICMART\gicmart\obj\Debug\gicmart.dll
 F:\gicmart\GICMART\gicmart\obj\Debug\gicmart.pdb
