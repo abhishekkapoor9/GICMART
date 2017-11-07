@@ -46,3 +46,4 @@ F:\gicmart\GICMART\gicmart\bin\DotNetOpenAuth.OpenId.xml
 F:\gicmart\GICMART\gicmart\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
 F:\gicmart\GICMART\gicmart\obj\Debug\gicmart.dll
 F:\gicmart\GICMART\gicmart\obj\Debug\gicmart.pdb
+F:\gicmart\GICMART\gicmart\obj\Debug\gicmart.csprojResolveAssemblyReference.cache

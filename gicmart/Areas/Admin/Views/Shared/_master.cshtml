@@ -127,7 +127,15 @@
             </a>
         </div>
     </div>
-    @RenderBody()
+
+    <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+    </div>
+
+    @*@RenderBody()*@
     <!-- footer-top -->
     <div class="w3agile-ftr-top">
         <div class="container">

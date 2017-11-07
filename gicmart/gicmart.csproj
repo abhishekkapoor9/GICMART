@@ -218,6 +218,7 @@
     <Content Include="Images\f7.png" />
     <Content Include="Images\f8.png" />
     <Content Include="Images\f9.png" />
+    <Content Include="Images\freedom.jpg" />
     <Content Include="Images\g1.png" />
     <Content Include="Images\g2.png" />
     <Content Include="Images\g3.png" />
@@ -229,6 +230,7 @@
     <Content Include="Images\h3.png" />
     <Content Include="Images\h4.png" />
     <Content Include="Images\h5.png" />
+    <Content Include="Images\Health.jpg" />
     <Content Include="Images\img1.jpg" />
     <Content Include="Images\img2.jpg" />
     <Content Include="Images\img3.jpg" />
@@ -249,6 +251,7 @@
     <Content Include="Images\nucleo-icon-7.html" />
     <Content Include="Images\nucleo-icon-8.html" />
     <Content Include="Images\nucleo-icon-9.html" />
+    <Content Include="Images\wealth.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\easing.js" />
@@ -313,6 +316,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\User\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\home.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\login.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
