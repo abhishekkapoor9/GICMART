@@ -219,11 +219,11 @@ margin-left: 4%;
                     <h6>Your stores. Your place.</h6>
                 </div>
                 <ul class="menu cf" style="z-index:9999">
-                    <li><a href="~/Views/Home/home">Home</a></li>
+                    <li><a href="~/Views/Home/Index">Home</a></li>
                     <li style="z-index:9999">
                         <a href="">About Us</a>
                         <ul class="submenu" style="z-index:9999">
-                            <li><a href="">Business Plan</a></li>
+                            <li><a href="~/Views/businessplan/mybusinessplan">Business Plan</a></li>
                         </ul>
                     </li>
                     @*<li><a href="">Legal</a></li>*@
@@ -235,10 +235,12 @@ margin-left: 4%;
                 </ul>
             </div>
         </div>
-    </div>
+    </div
+        <div class="container">
+@RenderBody()
+        </div>
     <!-- //header -->
     <!-- banner -->
-  @RenderBody()
     <!-- //subscribe -->
     <!-- footer -->
     <div class="footer">

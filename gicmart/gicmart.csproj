@@ -166,7 +166,9 @@
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\businessplanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\myhomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -234,6 +236,7 @@
     <Content Include="Images\img1.jpg" />
     <Content Include="Images\img2.jpg" />
     <Content Include="Images\img3.jpg" />
+    <Content Include="Images\ivoltaa-dual-usb.jpeg" />
     <Content Include="Images\m1.png" />
     <Content Include="Images\m2.png" />
     <Content Include="Images\m3.png" />
@@ -322,6 +325,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\businessplan\mybusinessplan.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
