@@ -254,6 +254,7 @@
     <Content Include="Images\nucleo-icon-7.html" />
     <Content Include="Images\nucleo-icon-8.html" />
     <Content Include="Images\nucleo-icon-9.html" />
+    <Content Include="Images\plan.jpg" />
     <Content Include="Images\wealth.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\custom.js" />

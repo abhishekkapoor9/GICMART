@@ -28,15 +28,9 @@
                 </div>
             </div>
         </header>
-
         <div id="body">
-             @RenderBody()
-                @*@RenderSection("featured", required: false)
-                <section class="content-wrapper main-content clear-fix">
-               
-                </section>*@
+             @RenderBody() 
         </div>
-
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
@@ -44,7 +38,6 @@
                 </div>
             </div>
         </footer>
-
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
     </body>
