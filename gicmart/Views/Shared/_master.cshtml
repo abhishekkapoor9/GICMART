@@ -246,6 +246,7 @@ margin-left: 4%;
     <div class="footer">
         <div class="container">
             <div class="footer-info w3-agileits-info">
+                
                 <div class="col-md-4 address-left agileinfo">
                     <div class="footer-logo header-logo">
                         <h2><a href="index-2.html"><span>G</span>ic <i>Mart</i></a></h2>
@@ -258,26 +259,33 @@ margin-left: 4%;
                         <li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@example.com</a></li>
                     </ul>
                 </div>
+
                 <div class="col-md-8 address-right">
                     <div class="col-md-4 footer-grids">
                         <h3>Company</h3>
                         <ul>
-                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="@Url.Action("aboutus", "aboutus")">About Us</a></li>
                             <li><a href="@Url.Action("registration", "registration")">Registration</a></li>
+                            <li><a href="@Url.Action("contactus", "contactus")">Contact Us</a></li>
+                           @* <li><a href="@Url.Action("login", "login")">Login</a></li>*@
+                            <li><a href="@Url.Action("home", "index")">Home</a></li>
+                            <li><a href="@Url.Action("gallery", "gallery")">gallery</a></li>
+                            
+
                             @*<li><a href="values.html">Core Values</a></li>
                             <li><a href="privacy.html">Privacy Policy</a></li>*@
                         </ul>
                     </div>
-                    <div class="col-md-4 footer-grids">
+
+                    @*<div class="col-md-4 footer-grids">
                         <h3>Services</h3>
                         <ul>
-                            <li><a href="@Url.Action("contactus", "contactus")">Contact Us</a></li>
-                            <li><a href="@Url.Action("login", "login")">Login</a></li>
-                            @*<li><a href="faq.html">FAQ</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
                             <li><a href="sitemap.html">Site Map</a></li>
-                            <li><a href="login.html">Order Status</a></li>*@
+                            <li><a href="login.html">Order Status</a></li>
                         </ul>
-                    </div>
+                    </div>*@
+
                    @* <div class="col-md-4 footer-grids">
                         <h3>Payment Methods</h3>
                         <ul>
