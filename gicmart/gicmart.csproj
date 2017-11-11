@@ -167,8 +167,12 @@
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\businessplanController.cs" />
+    <Compile Include="Controllers\contactusController.cs" />
+    <Compile Include="Controllers\galleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Controllers\myhomeController.cs" />
+    <Compile Include="Controllers\registrationController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -329,6 +333,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\businessplan\mybusinessplan.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\login\login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\registration\registration.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\contactus\contactus.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\gallery\gallery.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

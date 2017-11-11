@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "registration";
+    Layout = "~/Views/Shared/_master.cshtml";
+}
+<div style="background-color:steelblue; width:1350px;height:100px;margin-left:-105px;margin-right:0px">
+    @*<div style="float:left;height:100px;padding:40px"><h4 style="color:lightskyblue">business plan</h4></div>*@
+    <div style="float:left;color:white;padding:40px;height:100px"><h4><a href="@Url.Action("registration", "registration")" style="color:white">Registration</a></h4></div>
+    <div style="float:right;padding-right:100px;color:white;height:100px">
+       <div style="float:left;color:white;padding:40px;height:100px"><h4><a href="@Url.Action("index", "home")" style="color:lightskyblue">home</a></h4></div>
+       <div style="float:right;color:white;height:100px;padding:40px"><h4><a href="@Url.Action("login", "login")" style="color:lightskyblue">login</a></h4></div>     
+    </div>
+</div>
+<br />
+<div class="container" style="">
+
+    <form class="form-inline" action="/action_page.php">
+        <div class="form-group" style="margin-left:100px">
+             <div><label for="existinguid">Existing UserId:</label></div>
+             <input type="email" class="form-control" id="email" placeholder="Enter Existing UserId" name="email" style="width:400px">
+        </div>
+        <div class="form-group" style="margin-left:100px">
+             <div><label for="sponsorid">Sponsor ID:</label></div>
+             <input type="email" class="form-control" id="pwd" placeholder="Enter Sponsor ID" name="pwd" style="width:400px">
+        </div>   
+    </form>
+
+    <form class="form-inline" action="/action_page.php">
+        <div class="form-group" style="margin-left:100px">
+             <div><label for="existinguid">Pin:</label></div>
+             <input type="text" class="form-control" id="pin" placeholder="Enter Pin" name="pin" style="width:400px">
+        </div>
+        <div class="form-group" style="margin-left:100px">
+             <div><label for="sponsorid">Sponsor Name:</label></div>
+             <input type="text" class="form-control" id="spname" placeholder="Enter Sponsor Name" name="spname" style="width:400px">
+        </div>
+        <br /><br />
+        <div style="margin-left:100px">Basic Information</div>
+        <br />
+        <div class="form-group" style="margin-left:100px">
+             <div><label for="sponsorid">Name             Father/ Husband Name     Surname:</label></div>
+             <input type="text" class="form-control" id="spnf/hsname" placeholder="Enter Name  Father/ Husband Name  Surname" name="spname" style="width:900px">
+        </div>
+    </form>
+
+    <form class="form-inline" action="/action_page.php">
+        <div class="form-group" style="margin-left:100px">
+             <div><label for="existinguid">Mobile Number:</label></div>
+             <input type="email" class="form-control" id="mobileno" placeholder="Enter Mobile Number" name="mobile no" style="width:400px">
+        </div>
+        <div class="form-group" style="margin-left:100px">
+             <div><label for="sponsorid">Password:</label></div>
+             <input type="email" class="form-control" id="pwd" placeholder="Enter Password" name="pwd" style="width:400px">
+        </div>   
+    </form>
+
+    <form class="form-inline" action="/action_page.php">
+        <div class="form-group" style="margin-left:100px">
+             <div><label for="existinguid">Pan Card Number:</label></div>
+             <input type="text" class="form-control" id="pancardno" placeholder="Enter Pan Card Number" name="pancard" style="width:400px">
+        </div>
+        <div class="form-group" style="margin-left:100px">
+             <div><label for="sponsorid">Nominee Name:</label></div>
+             <input type="email" class="form-control" id="nomineename" placeholder="Enter Nominee Name" name="nominee" style="width:400px">
+        </div>   
+    </form>
+
+        <div class="col-md-6">
+            <div class="form-group" style="margin-left:80px">
+                <label>Address</label>
+                <textarea class="form-control" rows="5" name="address" placeholder="address" style="width:400px"></textarea>
+            </div>
+        </div>
+
+		<div class="col-md-6" >
+            <div class="form-group" style="margin-left:20px">
+                <label>State</label>
+                <input type="text" placeholder="Enter State"  name="state" class="form-control" style="width:400px">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group" style="margin-left:20px">
+                <label>City</label>
+                <input type="text" placeholder="Enter City"  name="city" class="form-control" style="width:400px">
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-left:85px">
+          <div class="form-group">
+            <label><input required type="checkbox"> Term & Condition</label><br /><br />
+            <button type="submit" class="btn btn-default" style="margin-left:400px">Submit</button>
+          </div>
+        </div> 
+ </div>
