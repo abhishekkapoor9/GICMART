@@ -135,11 +135,9 @@
         opacity: 1;
         visibility: visible;
     }
-
         .menu > li:hover .submenu li:nth-child(even) {
             transform: skewX(25deg) translateX(15px);
         }
-
         .menu > li:hover .submenu li:nth-child(odd) {
             transform: skewX(-25deg) translateX(-15px);
         }
@@ -153,17 +151,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function() {
-
         // Dock the header to the top of the window when scrolled past the banner. This is the default behaviour.
-
         $('.header-two').scrollToFixed();
         // previous summary up the page.
-
         var summaries = $('.summary');
         summaries.each(function(i) {
             var summary = $(summaries[i]);
             var next = summaries[i + 1];
-
             summary.scrollToFixed({
                 marginTop: $('.header-two').outerHeight(true) + 10,
                 zIndex: 999
@@ -184,16 +178,13 @@
 <!-- smooth-scrolling-of-move-up -->
 <script type="text/javascript">
 		$(document).ready(function() {
-
 			var defaults = {
 				containerID: 'toTop', // fading element id
 				containerHoverID: 'toTopHover', // fading element hover id
 				scrollSpeed: 1200,
 				easingType: 'linear'
 			};
-
 			$().UItoTop({ easingType: 'easeOutQuart' });
-
 		});
 </script>
 <!-- //smooth-scrolling-of-move-up -->
@@ -202,7 +193,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
         <!-- Wrapper-for-Slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
@@ -221,7 +211,6 @@
                     <h4 data-animation="animated fadeInUp">cupidatat non proident</h4>
                 </div>
             </div>
-
             <div class="item">
                 <!-- Third-Slide -->
                 <img src="~/Images/3.jpg" alt="" class="img-responsive" />
@@ -274,7 +263,6 @@
         </td>
     </tr>
 </table>
-
 </div>
 <!-- footer-top -->
 <div class="w3agile-ftr-top">

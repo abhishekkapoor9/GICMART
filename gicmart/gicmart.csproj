@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -178,6 +179,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -278,7 +280,9 @@
     <Content Include="Scripts\minicart.js" />
     <Content Include="Scripts\move-top.js" />
     <Content Include="Scripts\owl.carousel.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -338,13 +342,13 @@
     <Content Include="Views\login\login.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\registration\registration.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\contactus\contactus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\gallery\gallery.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\registration\register.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
