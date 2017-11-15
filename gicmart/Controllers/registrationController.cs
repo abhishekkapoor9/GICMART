@@ -8,7 +8,6 @@ using System.Data.SqlClient;
 using System.Configuration;
 using gicmart.Models;
 
-
 namespace gicmart.Controllers
 {
     public class registrationController : Controller
@@ -19,11 +18,6 @@ namespace gicmart.Controllers
         {
             return View();
         }
-
-        //public string registrationmethod()
-        //{
-        //    return "welcome to registration ";
-        //}
         [HttpPost]
         public ActionResult register( users usr)
         {
@@ -33,14 +27,14 @@ namespace gicmart.Controllers
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
                 string sp = "registration_sp";
-                SqlCommand cmd = new SqlCommand("sp", con);
+                SqlCommand cmd = new SqlCommand(sp, con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@userid", usr.userid);
                 cmd.Parameters.AddWithValue("@address", usr.address);
                 cmd.Parameters.AddWithValue("@password", usr.password);
                 cmd.Parameters.AddWithValue("@sponsorid", usr.sponsorid);
                 cmd.Parameters.AddWithValue("@sponsorname", usr.sponsorname);
-                cmd.Parameters.AddWithValue("@id", usr.pin);
+                cmd.Parameters.AddWithValue("@pin",usr.pin);
                 cmd.Parameters.AddWithValue("@name", usr.name);
                 cmd.Parameters.AddWithValue("@nomineename", usr.nomineename);
                 cmd.Parameters.AddWithValue("@state", usr.state);
@@ -49,16 +43,10 @@ namespace gicmart.Controllers
                 cmd.Parameters.AddWithValue("@mobileno", usr.mobileno);
                 cmd.Parameters.AddWithValue("@terandcontion", usr.termandcondition);
                 int wq = cmd.ExecuteNonQuery();
+                ViewBag.Message = string.Format("data inserted successfull");
                 con.Close();
             }
             return View(usr);
         }
-        
-        //public ActionResult registration()
-        //{
-            
-        //    return View("registration");
-        //}
-
     }
 }
