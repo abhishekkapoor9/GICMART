@@ -31,12 +31,12 @@ namespace gicmart.Controllers
                 //getting pin_no
                 string pinsp = "pin_sp";
                 SqlCommand cmd1 = new SqlCommand(pinsp, con);
-                SqlParameter parm = new SqlParameter("@pin_no", SqlDbType.NVarChar,50);
-                parm.Direction = ParameterDirection.Output;
-                cmd1.Parameters.Add(parm);
+                SqlParameter parm1 = new SqlParameter("@pin_no", SqlDbType.NVarChar,50);
+                parm1.Direction = ParameterDirection.Output;
+                cmd1.Parameters.Add(parm1);
                 cmd1.CommandType = CommandType.StoredProcedure;
                 cmd1.ExecuteNonQuery(); // MISSING
-                string retunvalue = parm.Value.ToString();
+                string retunvalue1 = parm1.Value.ToString();
                 //getting user_id
                 string usersp = "user_sp";
                 SqlCommand cmd2 = new SqlCommand(usersp, con);
@@ -44,7 +44,13 @@ namespace gicmart.Controllers
                 cmd2.Parameters.AddWithValue("@password", usr.password);
                 cmd2.Parameters.AddWithValue("@name", usr.name);
                 cmd2.Parameters.AddWithValue("@role", "user");
-                int ui = cmd2.ExecuteNonQuery();
+                SqlParameter parm2 = new SqlParameter("@user_id", SqlDbType.NVarChar, 50);
+                parm2.Direction = ParameterDirection.Output;
+                cmd2.Parameters.Add(parm2);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.ExecuteNonQuery(); // MISSING
+                string retunvalue2 = parm2.Value.ToString();
+                //int ui = cmd2.ExecuteNonQuery();
                 //getting sponsor_id
                 string sponsorsp = "sponsor_sp";
                 SqlCommand cmd3 = new SqlCommand(sponsorsp, con);

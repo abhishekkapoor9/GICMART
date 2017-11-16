@@ -8,19 +8,19 @@ namespace gicmart.Models
 {
     public class users
     {
-        [Display(Name = "user id")]
+        [Display(Name = "User Id")]
         [Required]
         public string userid { get; set; }//userid
         //[Display(Name = " sponsor id")]
         //[Required]
         public string sponsorid { get; set; }//sponsorid
-        [Display(Name = "sponsor name")]
+        [Display(Name = "Sponsor Name")]
         [Required]
         public string sponsorname { get; set; }//sponsorname
-        [Display(Name = "pin")]
+        [Display(Name = "PinNo")]
         [Required]
         public string pin { get; set; }//pin
-        [Display(Name = "name")]
+        [Display(Name = "Name")]
         [Required]
         public string name { get; set; }//name
         public int mobileno { get; set; }//mobileno
