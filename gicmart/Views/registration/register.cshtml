@@ -13,7 +13,29 @@
 </div>
 <br />
 @using (Html.BeginForm("register", "registration", FormMethod.Post))
+{
+    if (ViewBag.Message == "Success")
     {
+        <div class="alert alert-success fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Success!</strong> Data Saved successfully.
+        </div>
+    }
+
+    if (ViewBag.Message == "Fail")
+    {
+        <div class="alert alert-danger fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Error!</strong>  while submitting your data.
+        </div>
+    }
+    if (ViewBag.Pin == "Fail")
+    {
+        <div class="alert alert-danger fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Error!</strong> Invalid Pin.
+        </div>
+    }
 <div class="container" style="">
     <div class="row">
         <div class="col-md-4">@Html.LabelFor(Model => Model.userid, htmlAttributes: new { @class = "control-label" })</div>
@@ -21,7 +43,7 @@
         <div class="col-md-4">@Html.LabelFor(Model => Model.sponsorid, htmlAttributes: new { @class = "control-label" })</div>
         </div>
     <div class="row">
-        <div  class="col-md-4"> @Html.TextBoxFor(Model => Model.userid, new { @class="form-control",required = "required"})</div>
+        <div  class="col-md-4"> @Html.TextBoxFor(Model => Model.userid, new { @class="form-control",required = "required" })</div>
         <div class="col-md-2"></div>
         <div class="col-md-4">@Html.TextBoxFor(Model => Model.sponsorid, new { @class = "form-control" })</div>
     </div>
@@ -31,9 +53,9 @@
         <div class="col-md-4">@Html.LabelFor(Model => Model.sponsorname, htmlAttributes: new { @class = "control-label" })</div>
     </div>
     <div class="row">
-        <div class="col-md-4">@Html.TextBoxFor(Model => Model.pin, new { @class = "form-control" })</div>
+        <div class="col-md-4">@Html.TextBoxFor(Model => Model.pin, new { @class = "form-control",@id="txt_pinId" })</div>
         <div class="col-md-2"></div>
-        <div class="col-md-4">  @Html.TextBoxFor(Model => Model.sponsorname, new { @class="form-control"})</div>
+        <div class="col-md-4">  @Html.TextBoxFor(Model => Model.sponsorname, new { @class="form-control", @readonly = "readonly" })</div>
     </div>
         <br /><br />
         <div style="margin-left:100px">Basic Information</div>
@@ -86,3 +108,39 @@
         </div> 
 </div>
 }
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#txt_pinId").blur(function () {
+           
+            var pinId = $("#txt_pinId").val();
+            alert(pinId);
+            $.ajax
+            ({
+                url: '/registration/GetStateDdl',
+                type: 'POST',
+                datatype: 'application/json',
+                rownumbers: true,
+                beforeSend: function () { $("#stateddl").html(""); },
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    pinId: pinId
+                }),
+                success: function (result) {
+                        $.each((result), function (i, state) {
+                            if(state==1)
+                            {
+
+                            }
+                            else
+                            {
+                            }
+                        })
+                },
+                error: function (result) {
+                    alert("Whooaaa! Something went wrong..")
+                },
+            });
+
+        });
+    });
+</script>);
