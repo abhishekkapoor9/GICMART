@@ -23,7 +23,7 @@ namespace gicmart.Controllers
         [HttpPost]
         public ActionResult register( users usr)
         {
-            if (ModelState.IsValid)
+            //if (ModelState.IsValid)
             {
                 string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
                 SqlConnection con = new SqlConnection(cs);
@@ -31,9 +31,12 @@ namespace gicmart.Controllers
                 //getting pin_no
                 string pinsp = "pin_sp";
                 SqlCommand cmd1 = new SqlCommand(pinsp, con);
+                SqlParameter parm = new SqlParameter("@pin_no", SqlDbType.NVarChar,50);
+                parm.Direction = ParameterDirection.Output;
+                cmd1.Parameters.Add(parm);
                 cmd1.CommandType = CommandType.StoredProcedure;
-                cmd1.Parameters.AddWithValue("@status", "active");
-                int pn = cmd1.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery(); // MISSING
+                string retunvalue = parm.Value.ToString();
                 //getting user_id
                 string usersp = "user_sp";
                 SqlCommand cmd2 = new SqlCommand(usersp, con);

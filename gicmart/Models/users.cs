@@ -11,8 +11,8 @@ namespace gicmart.Models
         [Display(Name = "user id")]
         [Required]
         public string userid { get; set; }//userid
-        [Display(Name = " sponsor id")]
-        [Required]
+        //[Display(Name = " sponsor id")]
+        //[Required]
         public string sponsorid { get; set; }//sponsorid
         [Display(Name = "sponsor name")]
         [Required]
