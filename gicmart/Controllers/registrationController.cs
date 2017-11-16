@@ -12,6 +12,8 @@ namespace gicmart.Controllers
 {
     public class registrationController : Controller
     {
+       public string role;
+       public bool status;
         //
         // GET: /registration/
         public ActionResult register()
@@ -26,8 +28,29 @@ namespace gicmart.Controllers
                 string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
-                string sp = "registration_sp";
-                SqlCommand cmd = new SqlCommand(sp, con);
+                //getting pin_no
+                string pinsp = "pin_sp";
+                SqlCommand cmd1 = new SqlCommand(pinsp, con);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.Parameters.AddWithValue("@status", "active");
+                int pn = cmd1.ExecuteNonQuery();
+                //getting user_id
+                string usersp = "user_sp";
+                SqlCommand cmd2 = new SqlCommand(usersp, con);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.Parameters.AddWithValue("@password", usr.password);
+                cmd2.Parameters.AddWithValue("@name", usr.name);
+                cmd2.Parameters.AddWithValue("@role", "user");
+                int ui = cmd2.ExecuteNonQuery();
+                //getting sponsor_id
+                string sponsorsp = "sponsor_sp";
+                SqlCommand cmd3 = new SqlCommand(sponsorsp, con);
+                cmd3.CommandType = CommandType.StoredProcedure;
+                cmd3.Parameters.AddWithValue("@sponsorname", usr.sponsorname);
+                int spi = cmd3.ExecuteNonQuery();
+                //getting user details
+                string registersp = "registration_sp";
+                SqlCommand cmd = new SqlCommand(registersp, con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@userid", usr.userid);
                 cmd.Parameters.AddWithValue("@address", usr.address);
