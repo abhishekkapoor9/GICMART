@@ -45,7 +45,7 @@
     <div class="row">
         <div  class="col-md-4"> @Html.TextBoxFor(Model => Model.userid, new { @class="form-control",required = "required" })</div>
         <div class="col-md-2"></div>
-        <div class="col-md-4">@Html.TextBoxFor(Model => Model.sponsorid, new { @class = "form-control" })</div>
+        <div class="col-md-4">@Html.TextBoxFor(Model => Model.sponsorid, new { @class = "form-control", @id = "txt_spnsorId" })</div>
     </div>
     <div class="row" style="margin-top:2% !important">
         <div class="col-md-4">@Html.LabelFor(Model => Model.pin, htmlAttributes: new { @class = "control-label" })</div>
@@ -55,10 +55,10 @@
     <div class="row">
         <div class="col-md-4">@Html.TextBoxFor(Model => Model.pin, new { @class = "form-control",@id="txt_pinId" })</div>
         <div class="col-md-2"></div>
-        <div class="col-md-4">  @Html.TextBoxFor(Model => Model.sponsorname, new { @class="form-control", @readonly = "readonly" })</div>
+        <div class="col-md-4">  @Html.TextBoxFor(Model => Model.sponsorname, new { @class="form-control", @readonly = "readonly", @id = "txt_spnsorName" })</div>
     </div>
         <br /><br />
-        <div style="margin-left:100px">Basic Information</div>
+        <div style="margin-left:100px" id="div_text">Basic Information</div>
         <br />
     <div class="row" style="margin-top:2% !important">
         <div class="col-md-4">@Html.LabelFor(Model => Model.name, htmlAttributes: new { @class = "control-label" })</div>
@@ -113,14 +113,12 @@
         $("#txt_pinId").blur(function () {
            
             var pinId = $("#txt_pinId").val();
-            alert(pinId);
             $.ajax
             ({
-                url: '/registration/GetStateDdl',
+                url: '/registration/GetPinStatus',
                 type: 'POST',
                 datatype: 'application/json',
                 rownumbers: true,
-                beforeSend: function () { $("#stateddl").html(""); },
                 contentType: 'application/json',
                 data: JSON.stringify({
                     pinId: pinId
@@ -129,15 +127,43 @@
                         $.each((result), function (i, state) {
                             if(state==1)
                             {
-
+                                $("#div_text").html("Valid Pin");
+                                $("#div_text").css('font-size','40px');
                             }
                             else
                             {
+                                $("#div_text").html("InValid Pin");
+                                $("#div_text").css('font-size', '40px');
                             }
                         })
                 },
                 error: function (result) {
                     alert("Whooaaa! Something went wrong..")
+                },
+            });
+
+        });
+        $("#txt_spnsorId").blur(function () {
+
+            var sponsorId = $("#txt_spnsorId").val();
+            $.ajax
+            ({
+                url: '/registration/GetSponsorName',
+                type: 'POST',
+                datatype: 'application/json',
+                rownumbers: true,
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    sponsorId: sponsorId
+                }),
+                success: function (result) {
+                    $.each((result), function (i, state) {
+                            $("#txt_spnsorName").val(state);
+                    })
+                },
+                error: function (result) {
+                    alert("Whooaaa! Something went wrong..")
+                    $("#txt_spnsorName").val();
                 },
             });
 
