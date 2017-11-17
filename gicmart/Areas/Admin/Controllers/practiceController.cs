@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace gicmart.Areas.Admin.Controllers
 {
-    public class levelreportController : Controller
+    public class practiceController : Controller
     {
         //
-        // GET: /Admin/levelreport/
+        // GET: /Admin/practice/
 
         public ActionResult Index()
         {

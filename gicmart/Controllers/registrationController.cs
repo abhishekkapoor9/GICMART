@@ -25,7 +25,6 @@ namespace gicmart.Controllers
         {
             try
             {
-<<<<<<< HEAD
                 if (ModelState.IsValid)
                 {
                     string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
@@ -106,7 +105,6 @@ namespace gicmart.Controllers
             catch (Exception e1)
             {
                 ViewBag.Message = "Fail";
-=======
                 string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
@@ -159,7 +157,6 @@ namespace gicmart.Controllers
                 int wq = cmd.ExecuteNonQuery();
                 ViewBag.Message = string.Format("data inserted successfull");
                 con.Close();
->>>>>>> 5fa001ec73a82849401adc43bcfd4804949c0215
             }
             return View(usr);
         }
