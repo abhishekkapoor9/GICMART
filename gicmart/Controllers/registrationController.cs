@@ -71,7 +71,7 @@ namespace gicmart.Controllers
                         SqlCommand cmd1 = new SqlCommand(usersp, con);
                         cmd1.CommandType = CommandType.StoredProcedure;
 
-                        cmd1.Parameters.AddWithValue("@user_name", usr.pin);
+                        cmd1.Parameters.AddWithValue("@user_name", usr.userid);
                         cmd1.Parameters.AddWithValue("@role", "user");
                         cmd1.Parameters.AddWithValue("@user_pw", usr.password);
                         cmd1.Parameters.AddWithValue("@referenced_user_id", reference_user_id);
@@ -141,113 +141,8 @@ namespace gicmart.Controllers
             catch (Exception e1)
             {
                 ViewBag.Message = "Fail";
-<<<<<<< HEAD
-                //string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
-                //SqlConnection con = new SqlConnection(cs);
-                //con.Open();
-                ////getting pin_no
-                //string pinsp = "pin_sp";
-                //SqlCommand cmd1 = new SqlCommand(pinsp, con);
-                //SqlParameter parm1 = new SqlParameter("@pin_no", SqlDbType.NVarChar,50);
-                //parm1.Direction = ParameterDirection.Output;
-                //cmd1.Parameters.Add(parm1);
-                //cmd1.CommandType = CommandType.StoredProcedure;
-                //cmd1.ExecuteNonQuery(); // MISSING
-                //string retunvalue1 = parm1.Value.ToString();
-                ////getting user_id
-                //string usersp = "user_sp";
-                //SqlCommand cmd2 = new SqlCommand(usersp, con);
-                //cmd2.CommandType = CommandType.StoredProcedure;
-                //cmd2.Parameters.AddWithValue("@user_pw", usr.password);
-                //cmd2.Parameters.AddWithValue("@user_name", usr.name);
-                //cmd2.Parameters.AddWithValue("@role", "user");
-                //SqlParameter parm2 = new SqlParameter("@user_id", SqlDbType.NVarChar, 50);
-                //parm2.Direction = ParameterDirection.Output;
-                //cmd2.Parameters.Add(parm2);
-                //cmd2.CommandType = CommandType.StoredProcedure;
-                //cmd2.ExecuteNonQuery(); // MISSING
-                //string retunvalue2 = parm2.Value.ToString();
-                ////int ui = cmd2.ExecuteNonQuery();
-                ////getting sponsor_id
-                //string sponsorsp = "sponsor_sp";
-                //SqlCommand cmd3 = new SqlCommand(sponsorsp, con);
-                //cmd3.CommandType = CommandType.StoredProcedure;
-                //cmd3.Parameters.AddWithValue("@sponsorname", usr.sponsorname);
-                //int spi = cmd3.ExecuteNonQuery();
-                ////getting user details
-                //string registersp = "registration_sp";
-                //SqlCommand cmd = new SqlCommand(registersp, con);
-                //cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.Parameters.AddWithValue("@userid", usr.userid);
-                //cmd.Parameters.AddWithValue("@address", usr.address);
-                //cmd.Parameters.AddWithValue("@password", usr.password);
-                //cmd.Parameters.AddWithValue("@sponsorid", usr.sponsorid);
-                //cmd.Parameters.AddWithValue("@sponsorname", usr.sponsorname);
-                //cmd.Parameters.AddWithValue("@pin",usr.pin);
-                //cmd.Parameters.AddWithValue("@name", usr.name);
-                //cmd.Parameters.AddWithValue("@nomineename", usr.nomineename);
-                //cmd.Parameters.AddWithValue("@state", usr.state);
-                //cmd.Parameters.AddWithValue("@city", usr.city);
-                //cmd.Parameters.AddWithValue("@pancardno", usr.pancardno);
-                //cmd.Parameters.AddWithValue("@mobileno", usr.mobileno);
-                //cmd.Parameters.AddWithValue("@terandcontion", usr.termandcondition);
-                //int wq = cmd.ExecuteNonQuery();
-                //ViewBag.Message = string.Format("data inserted successfull");
-                //con.Close();
-=======
-                string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-                //getting pin_no
-                string pinsp = "pin_sp";
-                SqlCommand cmd1 = new SqlCommand(pinsp, con);
-                SqlParameter parm1 = new SqlParameter("@pin_no", SqlDbType.NVarChar,50);
-                parm1.Direction = ParameterDirection.Output;
-                cmd1.Parameters.Add(parm1);
-                cmd1.CommandType = CommandType.StoredProcedure;
-                cmd1.ExecuteNonQuery(); // MISSING
-                string retunvalue1 = parm1.Value.ToString();
-                //getting user_id
-                string usersp = "user_sp";
-                SqlCommand cmd2 = new SqlCommand(usersp, con);
-                cmd2.CommandType = CommandType.StoredProcedure;
-                cmd2.Parameters.AddWithValue("@password", usr.password);
-                cmd2.Parameters.AddWithValue("@name", usr.name);
-                cmd2.Parameters.AddWithValue("@role", "user");
-                SqlParameter parm2 = new SqlParameter("@user_id", SqlDbType.NVarChar, 50);
-                parm2.Direction = ParameterDirection.Output;
-                cmd2.Parameters.Add(parm2);
-                cmd2.CommandType = CommandType.StoredProcedure;
-                cmd2.ExecuteNonQuery(); // MISSING
-                string retunvalue2 = parm2.Value.ToString();
-                //int ui = cmd2.ExecuteNonQuery();
-                //getting sponsor_id
-                string sponsorsp = "sponsor_sp";
-                SqlCommand cmd3 = new SqlCommand(sponsorsp, con);
-                cmd3.CommandType = CommandType.StoredProcedure;
-                cmd3.Parameters.AddWithValue("@sponsorname", usr.sponsorname);
-                int spi = cmd3.ExecuteNonQuery();
-                //getting user details
-                string registersp = "registration_sp";
-                SqlCommand cmd = new SqlCommand(registersp, con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@userid", usr.userid);
-                cmd.Parameters.AddWithValue("@address", usr.address);
-                cmd.Parameters.AddWithValue("@password", usr.password);
-                cmd.Parameters.AddWithValue("@sponsorid", usr.sponsorid);
-                cmd.Parameters.AddWithValue("@sponsorname", usr.sponsorname);
-                cmd.Parameters.AddWithValue("@pin",usr.pin);
-                cmd.Parameters.AddWithValue("@name", usr.name);
-                cmd.Parameters.AddWithValue("@nomineename", usr.nomineename);
-                cmd.Parameters.AddWithValue("@state", usr.state);
-                cmd.Parameters.AddWithValue("@city", usr.city);
-                cmd.Parameters.AddWithValue("@pancardno", usr.pancardno);
-                cmd.Parameters.AddWithValue("@mobileno", usr.mobileno);
-                cmd.Parameters.AddWithValue("@terandcontion", usr.termandcondition);
-                int wq = cmd.ExecuteNonQuery();
-                ViewBag.Message = string.Format("data inserted successfull");
-                con.Close();
->>>>>>> 9a74c8cf3862688ff8ebc0fd32a41909f9eca957
+
+
             }
             return View(usr);
         }
@@ -305,20 +200,13 @@ namespace gicmart.Controllers
             SqlCommand cmd4 = new SqlCommand(usersp2, con);
             cmd4.CommandType = CommandType.StoredProcedure;
             cmd4.Parameters.AddWithValue("@sponserId", sponsorId);
-            //SqlParameter parm2 = new SqlParameter("@sponserName", SqlDbType.NVarChar,50);
-            //parm2.Direction = ParameterDirection.Output;
-            //cmd4.Parameters.Add(parm2);
-            // MISSINz
             try
             {
                 rdr = cmd4.ExecuteReader();
-
-                // iterate through results, printing each to console
                 while (rdr.Read())
                 {
                     sponserName= rdr["sponsor_name"].ToString();
                 }
-                //sponserName = parm2.Value.ToString();
             }
             catch (Exception e1)
             {
