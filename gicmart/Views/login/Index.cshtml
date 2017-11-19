@@ -1,13 +1,14 @@
 ﻿@{
-    ViewBag.Title = "login";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_master.cshtml";
 }
+
 <div style="background-color:steelblue; width:118%;height:100px;margin-left:-105px;margin-right:0px">
     @*<div style="float:left;height:100px;padding:40px"><h4 style="color:lightskyblue">business plan</h4></div>*@
  <div style="float:left;color:white;padding:40px;height:100px"><h4><a href="@Url.Action("registration", "registration")" style="color:white">Registration</a></h4></div>
     <div style="float:right;padding-right:100px;color:white;height:100px">
        <div style="float:left;color:white;padding:0px;height:100px;margin-top:40px"><h4><a href="@Url.Action("index", "home")" style="color:lightskyblue">Home</a></h4></div>
-       <div style="float:left;color:white;padding:10px;height:100px;margin-top:30px"><h4><a href="@Url.Action("login", "login")" style="color:lightskyblue">Login</a></h4></div>     
+       <div style="float:left;color:white;padding:10px;height:100px;margin-top:30px"><h4><a href="@Url.Action("Index", "login")" style="color:lightskyblue">Login</a></h4></div>     
     </div>
  </div>
 <br />

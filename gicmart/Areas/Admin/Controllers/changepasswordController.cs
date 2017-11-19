@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace gicmart.Controllers
+namespace gicmart.Areas.Admin.Controllers
 {
-    public class loginController : Controller
+    public class changepasswordController : Controller
     {
         //
-        // GET: /lohin/
+        // GET: /Admin/changepassword/
 
         public ActionResult Index()
         {

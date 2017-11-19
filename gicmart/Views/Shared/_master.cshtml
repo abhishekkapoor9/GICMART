@@ -98,30 +98,30 @@ margin-left: 4%;
 
             /* Odd stuff */
             .submenu > li:nth-child(odd) {
-                transform: skewX(-25deg) translateX(0);
+                transform: skewX(0deg) translateX(0);/*-25*/
             }
 
                 .submenu > li:nth-child(odd) > a {
-                    transform: skewX(25deg);
+                    transform: skewX(0deg);/*25*/
                 }
 
                 .submenu > li:nth-child(odd)::after {
                     right: -50%;
-                    transform: skewX(-25deg) rotate(3deg);
+                    transform: skewX(0deg) rotate(0deg);/*-25 3*/
                 }
 
             /* Even stuff */
             .submenu > li:nth-child(even) {
-                transform: skewX(25deg) translateX(0);
+                transform: skewX(0deg) translateX(0);/*25*/
             }
 
                 .submenu > li:nth-child(even) > a {
-                    transform: skewX(-25deg);
+                    transform: skewX(deg);/*-25*/
                 }
 
                 .submenu > li:nth-child(even)::after {
                     left: -50%;
-                    transform: skewX(25deg) rotate(3deg);
+                    transform: skewX(0deg) rotate(0deg);/*25 3*/
                 }
 
             /* Show dropdown */
@@ -142,11 +142,11 @@ margin-left: 4%;
         }
 
             .menu > li:hover .submenu li:nth-child(even) {
-                transform: skewX(25deg) translateX(15px);
+                transform: skewX(25deg) translateX(15px);/*25 15*/
             }
 
             .menu > li:hover .submenu li:nth-child(odd) {
-                transform: skewX(-25deg) translateX(-15px);
+                transform: skewX(0deg) translateX(0px);/*-25 -15*/
             }
     </style>
     <script type="application/x-javascript">
@@ -220,17 +220,15 @@ margin-left: 4%;
                 </div>
                 <ul class="menu cf" style="z-index:9999">
                     <li><a href="@Url.Action("index", "home")">Home</a></li>
-                    <li style="z-index:9999">
-                        <a href="">About Us</a>
+                    <li style="z-index:9999"><a href="">About Us</a>
                         <ul class="submenu" style="z-index:9999">
                             <li><a href="@Url.Action("mybusinessplan", "businessplan")">Business Plan</a></li>
                         </ul>
                     </li>
-                    @*<li><a href="">Legal</a></li>*@
                     <li><a href="@Url.Action("gallery", "gallery")">Gallery</a></li>
-                    <li><a href="">Product Gallery</a></li>
+                    <li><a href="@Url.Action("gallery", "gallery")">Product Gallery</a></li>
                     <li><a href="@Url.Action("contactus", "contactus")">Contact Us</a></li>
-                    <li><a href="@Url.Action("login", "login")">Login</a></li>
+                    <li><a href="@Url.Action("Index", "login")">Login</a></li>
                     <li><a href="@Url.Action("register", "registration")">Register</a></li>
                 </ul>
             </div>

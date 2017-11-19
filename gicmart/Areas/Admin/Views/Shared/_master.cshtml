@@ -79,7 +79,7 @@
 
             .submenu li {
                 background-color: #34495e;
-                position:initial;/*relative*/
+                position:relative;/*relative*/
                 overflow: hidden;
             }
 
@@ -159,13 +159,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function () {
-
-            // Dock the header to the top of the window when scrolled past the banner. This is the default behaviour.
-
+        $(document).ready(function () {          
             $('.header-two').scrollToFixed();
             // previous summary up the page.
-
             var summaries = $('.summary');
             summaries.each(function (i) {
                 var summary = $(summaries[i]);
@@ -187,8 +183,6 @@
             });
         });
     </script>
-    <!-- //end-smooth-scrolling -->
-    <!-- smooth-scrolling-of-move-up -->
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -203,69 +197,7 @@
 
         });
     </script>
-    <!-- //smooth-scrolling-of-move-up -->
-
-    @*<title>GIC MART</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/scripts")
-    <script type="application/x-javascript">
-        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-        function hideURLbar(){ window.scrollTo(0,1); }
-    </script>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
-    <!-- web-fonts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>*@
-
-    @*<script>
-    $(document).ready(function() {
-
-        // Dock the header to the top of the window when scrolled past the banner. This is the default behaviour.
-
-        $('.header-two').scrollToFixed();
-        // previous summary up the page.
-
-        var summaries = $('.summary');
-        summaries.each(function(i) {
-            var summary = $(summaries[i]);
-            var next = summaries[i + 1];
-
-            summary.scrollToFixed({
-                marginTop: $('.header-two').outerHeight(true) + 10,
-                zIndex: 999
-            });
-        });
-    });
-    </script>
-    <!-- start-smooth-scrolling -->
-    <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
-		});
-    </script>
-    <!-- //end-smooth-scrolling -->
-    <!-- smooth-scrolling-of-move-up -->
-    <script type="text/javascript">
-		$(document).ready(function() {
-
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear'
-			};
-
-			$().UItoTop({ easingType: 'easeOutQuart' });
-
-		});
-    </script>*@
-    <!-- //smooth-scrolling-of-move-up -->
+    
 </head>
 <body>
     <!-- header -->
@@ -281,49 +213,29 @@
                 </div>
                 <ul class="menu cf" style="z-index: 9999">
                     <li><a href="@Url.Action("index", "dashboard")">Home</a></li>
-                    <li style="z-index: 9999"><a href="@Url.Action("","")">PIN POINT DETAILS</a></li>
-                    <li style="z-index: 9999"><a href="@Url.Action("gallery", "gallery")">MY TEAM</a>
+                    <li style="z-index: 9999"><a href="@Url.Action("#","#")">PIN POINT DETAILS</a></li>
+
+                    <li style="z-index: 9999"><a href="@Url.Action("", "")">MY TEAM</a>
                        <ul class="submenu" style="z-index: 9999">
                             <li><a href="@Url.Action("Index", "levelreport")">NON WORKING LEVEL</a></li>
-                                @*<ul class="submenu" style="z-index: 9999">*@
-                                    <li><a href="@Url.Action("Index", "myrepurchage")">MY RE-JOIN ENTRY</a></li>
-                                        @*<ul class="submenu" style="z-index: 9999">*@
-                                            <li><a href="@Url.Action("Index", "mysponsor")" style=" font-style:initial">MY SPONSOR</a></li> 
-                                                @*<ul class="submenu" style="z-index: 9999">*@
-                                                    <li><a href="@Url.Action("Index", "sponsorlevel")" style=" font-style:initial">GENERATION</a></li>   
-                                                @*</ul>*@
-                                        @*</ul>*@
-                                @*</ul>*@
+                            <li><a href="@Url.Action("Index", "myrepurchage")">MY RE-JOIN ENTRY</a></li>
+                            <li><a href="@Url.Action("Index", "mysponsor")" style=" font-style:initial">MY SPONSOR</a></li> 
+                            <li><a href="@Url.Action("Index", "sponsorlevel")" style=" font-style:initial">GENERATION</a></li>   
                         </ul>
                     </li>
-                    <li><a href="">E-PIN</a></li>
+
+                    <li><a href="@Url.Action("Index", "reward")">E-PIN</a></li>
                     <li><a href="@Url.Action("Index", "reward")">REWARDS</a></li>
-                    <li><a href="@Url.Action("login", "login")">ACCOUNT</a>
+
+                    <li style="z-index: 9999"><a href="@Url.Action("", "")">ACCOUNT</a>
                          <ul class="submenu" style="z-index: 9999">
                             <li><a href="@Url.Action("Index", "welletter")">WELECOME LETTER</a></li>
-                                @*<ul class="submenu" style="z-index: 9999">*@
-                                    <li><a href="@Url.Action("Index", "myrepurchage")">ACCOUNT SETTING</a></li>
-                                        @*<ul class="submenu" style="z-index: 9999">*@
-                                            <li><a href="@Url.Action("Index", "profile")" style=" font-style:initial">PROFILE</a></li> 
-                                                @*<ul class="submenu" style="z-index: 9999">*@
-                                                    <li><a href="@Url.Action("Index", "login")" style=" font-style:initial">CHANGE PASSWORD</a></li>   
-                                                @*</ul>*@
-                                        @*</ul>*@
-                                @*</ul>*@
+                            <li><a href="@Url.Action("Index", "myrepurchage")">ACCOUNT SETTING</a></li>
+                            <li><a href="@Url.Action("Index", "profile")" style=" font-style:initial">PROFILE</a></li>                                      
+                            <li><a href="@Url.Action("Index","changepassword")" style=" font-style:initial">CHANGE PASSWORD</a></li>   
                         </ul>
-                       @*<ul class="submenu" style="z-index: 9999">
-                           <li><a href="@Url.Action("Index", "welletter")">WELECOME LETTER</a></li>
-                               <ul class="submenu" style="z-index: 9999">
-                                   <li><a href="@Url.Action("Index", "myrepurchage")">ACCOUNT SETTING</a>
-                                       <ul class="submenu" style="z-index: 9999" >
-                                           <li><a href="@Url.Action("Index", "profile")" style=" font-style:initial">PROFILE</a></li>
-                                              <ul class="submenu" style="z-index: 9999" >
-                                                  <li><a href="@Url.Action("login", "login")" style=" font-style:initial">CHANGE PASSWORD</a></li>
-                                              </ul>
-                                       </ul>   
-                               </ul>
-                       </ul>*@
                     </li>
+
                     <li><a href="@Url.Action("register", "registration")">LOGOUT</a></li>
                 </ul>
             </div>
@@ -332,70 +244,7 @@
     <div class="container">
         @*@RenderBody()*@
     </div>
-    <!-- //header -->
-
-    @*<!-- header -->
-    <div class="header" style=" ">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">     
-        <div class="header-three" style=" ">
-            <!-- header-three -->
-            <div class="container" style="">
-                <div class="header-logo" style="">
-                    <h1><a href="~/Images/index-2.html"><span>G</span>ic <i>Mart</i></a></h1>
-                    <h6>Your stores. Your place.</h6>
-                </div>
-                <div class="move-text">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //header -->*@
-    <!-- banner -->
-    @*<div class="banner">
-        <div id="kb" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel" data-interval="6000" data-pause="hover">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
-            <!-- Wrapper-for-Slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <!-- First-Slide -->
-                    <img src="~/Images/5.jpg" alt="" class="img-responsive" />
-                    <div class="carousel-caption kb_caption kb_caption_right">
-                        <h3 data-animation="animated flipInX">Flat <span>50%</span> Discount</h3>
-                        <h4 data-animation="animated flipInX">Hot Offer Today Only</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <!-- Second-Slide -->
-                    <img src="~/Images/8.jpg" alt="" class="img-responsive" />
-                    <div class="carousel-caption kb_caption kb_caption_right">
-                        <h3 data-animation="animated fadeInDown">Our Latest Fashion Editorials</h3>
-                        <h4 data-animation="animated fadeInUp">cupidatat non proident</h4>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <!-- Third-Slide -->
-                    <img src="~/Images/3.jpg" alt="" class="img-responsive" />
-                    <div class="carousel-caption kb_caption kb_caption_center">
-                        <h3 data-animation="animated fadeInLeft">End Of Season Sale</h3>
-                        <h4 data-animation="animated flipInX">cupidatat non proident</h4>
-                    </div>
-                </div>
-            </div>
-            <!-- Left-Button -->
-            <a class="left carousel-control kb_control_left" href="#kb" role="button" data-slide="prev">
-                <span class="fa fa-angle-left kb_icons" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <!-- Right-Button -->
-            <a class="right carousel-control kb_control_right" href="#kb" role="button" data-slide="next">
-                <span class="fa fa-angle-right kb_icons" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>*@
-
+   
     <div id="body" style="height: auto">
         @RenderSection("body", required: false)
         <section class="content-wrapper main-content clear-fix">
@@ -403,129 +252,7 @@
         </section>
     </div>
 
-    @*@RenderBody()*@
-    <!-- footer-top -->
-    @* <div class="w3agile-ftr-top">
-        <div class="container">
-            <div class="ftr-toprow">
-                <div class="col-md-4 ftr-top-grids">
-                    <div class="ftr-top-left">
-                        <i class="fa fa-truck" aria-hidden="true"></i>
-                    </div>
-                    <div class="ftr-top-right">
-                        <h4>FREE DELIVERY</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="col-md-4 ftr-top-grids">
-                    <div class="ftr-top-left">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </div>
-                    <div class="ftr-top-right">
-                        <h4>CUSTOMER CARE</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="col-md-4 ftr-top-grids">
-                    <div class="ftr-top-left">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                    </div>
-                    <div class="ftr-top-right">
-                        <h4>GOOD QUALITY</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-    </div>
-    <!-- //footer-top -->
-    <!-- subscribe -->
-    <div class="subscribe">
-        <div class="container">
-            <div class="col-md-6 social-icons w3-agile-icons">
-                <h4>Keep in touch</h4>
-                <ul>
-                    <li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
-                    <li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
-                    <li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
-                    <li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
-                    <li><a href="#" class="fa fa-rss icon rss"> </a></li>
-                </ul>
-                <ul class="apps">
-                    <li><h4>Download Our app : </h4> </li>
-                    <li><a href="#" class="fa fa-apple"></a></li>
-                    <li><a href="#" class="fa fa-windows"></a></li>
-                    <li><a href="#" class="fa fa-android"></a></li>
-                </ul>
-            </div>
-            <div class="col-md-6 subscribe-right">
-                <h4>Sign up for email and get 25%off!</h4>
-                <form action="#" method="post">
-                    <input type="text" name="email" placeholder="Enter your Email..." required="">
-                    <input type="submit" value="Subscribe">
-                </form>
-                <div class="clearfix"> </div>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-    <!-- //subscribe -->
-    <!-- footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="footer-info w3-agileits-info">
-                <div class="col-md-4 address-left agileinfo">
-                    <div class="footer-logo header-logo">
-                        <h2><a href="index-2.html"><span>S</span>mart <i>Bazaar</i></a></h2>
-                        <h6>Your stores. Your place.</h6>
-                    </div>
-                    <ul>
-                        <li><i class="fa fa-map-marker"></i> 123 San Sebastian, New York City USA.</li>
-                        <li><i class="fa fa-mobile"></i> 333 222 3333 </li>
-                        <li><i class="fa fa-phone"></i> +222 11 4444 </li>
-                        <li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@example.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-8 address-right">
-                    <div class="col-md-4 footer-grids">
-                        <h3>Company</h3>
-                        <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="marketplace.html">Marketplace</a></li>
-                            <li><a href="values.html">Core Values</a></li>
-                            <li><a href="privacy.html">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 footer-grids">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="login.html">Returns</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="sitemap.html">Site Map</a></li>
-                            <li><a href="login.html">Order Status</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 footer-grids">
-                        <h3>Payment Methods</h3>
-                        <ul>
-                            <li><i class="fa fa-laptop" aria-hidden="true"></i> Net Banking</li>
-                            <li><i class="fa fa-money" aria-hidden="true"></i> Cash On Delivery</li>
-                            <li><i class="fa fa-pie-chart" aria-hidden="true"></i>EMI Conversion</li>
-                            <li><i class="fa fa-gift" aria-hidden="true"></i> E-Gift Voucher</li>
-                            <li><i class="fa fa-credit-card" aria-hidden="true"></i> Debit/Credit Card</li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>*@
+    
     <!-- //footer -->
     <div class="copy-right" style="">
         <div class="container" style="">

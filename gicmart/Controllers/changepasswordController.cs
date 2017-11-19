@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace gicmart.Controllers
 {
-    public class loginController : Controller
+    public class changepasswordController : Controller
     {
         //
-        // GET: /lohin/
+        // GET: /changepassword/
 
         public ActionResult Index()
         {

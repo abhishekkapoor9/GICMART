@@ -164,6 +164,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\changepasswordController.cs" />
     <Compile Include="Areas\Admin\Controllers\dashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\levelreportController.cs" />
@@ -173,9 +174,11 @@
     <Compile Include="Areas\Admin\Controllers\rewardController.cs" />
     <Compile Include="Areas\Admin\Controllers\sponsorlevelController.cs" />
     <Compile Include="Areas\Admin\Controllers\welletterController.cs" />
+    <Compile Include="Areas\Admin\Models\profile.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\businessplanController.cs" />
+    <Compile Include="Controllers\changepasswordController.cs" />
     <Compile Include="Controllers\contactusController.cs" />
     <Compile Include="Controllers\galleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -319,7 +322,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
@@ -347,9 +349,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\businessplan\mybusinessplan.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\login\login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\contactus\contactus.cshtml" />
@@ -383,6 +382,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\dashboard\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\login\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\changepassword\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\changepassword\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
