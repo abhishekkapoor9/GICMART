@@ -97,7 +97,7 @@ namespace gicmart.Controllers
                         int wq = cmd.ExecuteNonQuery();
 
 
-                        // getting SponserId
+                        // getting PinId
 
                         string pinsp = "pin_sp";
                         SqlCommand cmd11 = new SqlCommand(pinsp, con);
@@ -108,6 +108,8 @@ namespace gicmart.Controllers
                         cmd11.ExecuteNonQuery(); // MISSING
                         string pinNo = parm1.Value.ToString();
                         pinNo = "PNI" + pinNo;
+
+                        //For User Sponser
                         string userspn = "user_sponsor_sp";
                         SqlCommand cmd2 = new SqlCommand(userspn, con);
                         cmd2.CommandType = CommandType.StoredProcedure;
@@ -116,13 +118,22 @@ namespace gicmart.Controllers
                         cmd2.Parameters.AddWithValue("@pin_no", pinNo);
                         int w = cmd2.ExecuteNonQuery();
 
-                    
+                        //For Update Pin
                         string updatePin  = "sp_updatePinNo";
                         SqlCommand cmd8 = new SqlCommand(updatePin, con);
                         cmd8.CommandType = CommandType.StoredProcedure;
                         cmd8.Parameters.AddWithValue("@pin_No", usr.pin);
 
                         int w9 = cmd8.ExecuteNonQuery();
+
+                        string userPin = "sp_setuserpin";
+                        SqlCommand cmd10 = new SqlCommand(userPin, con);
+                        cmd10.CommandType = CommandType.StoredProcedure;
+                        cmd10.Parameters.AddWithValue("@updatedpin_no", usr.pin);
+                        cmd10.Parameters.AddWithValue("@userdId", userId);
+                        cmd10.Parameters.AddWithValue("@pin_no", pinNo);
+
+                        int w10 = cmd10.ExecuteNonQuery();
 
                         ViewBag.Message = "Success";
                         con.Close();
