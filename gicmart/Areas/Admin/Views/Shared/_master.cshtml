@@ -69,9 +69,9 @@
 
         /* Dropdown */
         .submenu {
-            position: absolute;
-            width: 200px;
-            left: 50%;
+            position:absolute;
+            width: 220px;/*200*/
+            left:45%;/*50%*/
             margin-left: -100px;
             transform: skewX(0deg);/*-25*/
             transform-origin: left top;
@@ -79,17 +79,16 @@
 
             .submenu li {
                 background-color: #34495e;
-                position: relative;
+                position:initial;/*relative*/
                 overflow: hidden;
             }
 
             .submenu > li > a {
-                padding: 1em 2em;
+                padding: 1em 1em;/*1,2*/
             }
-
             .submenu > li::after {
                 content: '';
-                position: absolute; /*  */
+                position: absolute; /* absolute  */
                 top: -125%;
                 height: 100%;
                 width: 100%;
@@ -98,30 +97,30 @@
 
             /* Odd stuff */
             .submenu > li:nth-child(odd) {
-                transform: skewX(-25deg) translateX(0);
+                transform: skewX(0deg) translateX(0);/*-25*/
             }
 
                 .submenu > li:nth-child(odd) > a {
-                    transform: skewX(25deg);
+                    transform: skewX(0deg);/*25*/
                 }
 
                 .submenu > li:nth-child(odd)::after {
-                    right: -50%;
-                    transform: skewX(-25deg) rotate(3deg);
+                    right: 0%;/*-50%*/
+                    transform: skewX(0deg) rotate(3deg); /*-25*/
                 }
 
             /* Even stuff */
             .submenu > li:nth-child(even) {
-                transform: skewX(25deg) translateX(0);
+                transform: skewX(0deg) translateX(0);/*25*/
             }
 
                 .submenu > li:nth-child(even) > a {
-                    transform: skewX(-25deg);
+                    transform: skewX(0deg);/*-25*/
                 }
 
                 .submenu > li:nth-child(even)::after {
-                    left: -50%;
-                    transform: skewX(25deg) rotate(3deg);
+                    left: 0%;/*-50%*/
+                    transform: skewX(0deg) rotate(3deg);/*25*/
                 }
 
             /* Show dropdown */
@@ -142,11 +141,11 @@
         }
 
             .menu > li:hover .submenu li:nth-child(even) {
-                transform: skewX(25deg) translateX(15px);
+                transform: skewX(0deg) translateX(0px);/*25*//*-15*/
             }
 
             .menu > li:hover .submenu li:nth-child(odd) {
-                transform: skewX(-25deg) translateX(-15px);
+                transform: skewX(0deg) translateX(0px);/*-25*//*-15*/
             }
     </style>
     <script type="application/x-javascript">
@@ -281,29 +280,50 @@
                     <h6>Your stores. Your place.</h6>
                 </div>
                 <ul class="menu cf" style="z-index: 9999">
-                    <li><a href="@Url.Action("index", "home")">Home</a></li>
-                    <li style="z-index: 9999">
-                        <a href="">PIN POINT DETAILS</a>
-                    </li>
-                    @*<li><a href="">Legal</a></li>*@
+                    <li><a href="@Url.Action("index", "dashboard")">Home</a></li>
+                    <li style="z-index: 9999"><a href="@Url.Action("","")">PIN POINT DETAILS</a></li>
                     <li style="z-index: 9999"><a href="@Url.Action("gallery", "gallery")">MY TEAM</a>
-                        <ul class="submenu" style="z-index: 9999">
-                            <li><a href="@Url.Action("mybusinessplan", "businessplan")">Business Plan</a></li>
-                                <ul class="submenu" style="z-index: 9999">
-                                    <li><a href="@Url.Action("mybusinessplan", "businessplan")">Business Plan</a></li>
-                                       <ul class="submenu" style="z-index: 9999">
-                                           <li><a href="@Url.Action("mybusinessplan", "businessplan")" style=" font-style:initial">Business Plan</a></li> 
-                                               <ul class="submenu" style="z-index: 9999">
-                                                   <li><a href="@Url.Action("mybusinessplan", "businessplan")" style=" font-style:initial">Business Plan</a></li>   
-  
-                            </ul>
-                            </ul>
-                            
+                       <ul class="submenu" style="z-index: 9999">
+                            <li><a href="@Url.Action("Index", "levelreport")">NON WORKING LEVEL</a></li>
+                                @*<ul class="submenu" style="z-index: 9999">*@
+                                    <li><a href="@Url.Action("Index", "myrepurchage")">MY RE-JOIN ENTRY</a></li>
+                                        @*<ul class="submenu" style="z-index: 9999">*@
+                                            <li><a href="@Url.Action("Index", "mysponsor")" style=" font-style:initial">MY SPONSOR</a></li> 
+                                                @*<ul class="submenu" style="z-index: 9999">*@
+                                                    <li><a href="@Url.Action("Index", "sponsorlevel")" style=" font-style:initial">GENERATION</a></li>   
+                                                @*</ul>*@
+                                        @*</ul>*@
+                                @*</ul>*@
                         </ul>
                     </li>
                     <li><a href="">E-PIN</a></li>
-                    <li><a href="@Url.Action("contactus", "contactus")">REWARDS</a></li>
-                    <li><a href="@Url.Action("login", "login")">ACCOUNT</a></li>
+                    <li><a href="@Url.Action("Index", "reward")">REWARDS</a></li>
+                    <li><a href="@Url.Action("login", "login")">ACCOUNT</a>
+                         <ul class="submenu" style="z-index: 9999">
+                            <li><a href="@Url.Action("Index", "welletter")">WELECOME LETTER</a></li>
+                                @*<ul class="submenu" style="z-index: 9999">*@
+                                    <li><a href="@Url.Action("Index", "myrepurchage")">ACCOUNT SETTING</a></li>
+                                        @*<ul class="submenu" style="z-index: 9999">*@
+                                            <li><a href="@Url.Action("Index", "profile")" style=" font-style:initial">PROFILE</a></li> 
+                                                @*<ul class="submenu" style="z-index: 9999">*@
+                                                    <li><a href="@Url.Action("Index", "login")" style=" font-style:initial">CHANGE PASSWORD</a></li>   
+                                                @*</ul>*@
+                                        @*</ul>*@
+                                @*</ul>*@
+                        </ul>
+                       @*<ul class="submenu" style="z-index: 9999">
+                           <li><a href="@Url.Action("Index", "welletter")">WELECOME LETTER</a></li>
+                               <ul class="submenu" style="z-index: 9999">
+                                   <li><a href="@Url.Action("Index", "myrepurchage")">ACCOUNT SETTING</a>
+                                       <ul class="submenu" style="z-index: 9999" >
+                                           <li><a href="@Url.Action("Index", "profile")" style=" font-style:initial">PROFILE</a></li>
+                                              <ul class="submenu" style="z-index: 9999" >
+                                                  <li><a href="@Url.Action("login", "login")" style=" font-style:initial">CHANGE PASSWORD</a></li>
+                                              </ul>
+                                       </ul>   
+                               </ul>
+                       </ul>*@
+                    </li>
                     <li><a href="@Url.Action("register", "registration")">LOGOUT</a></li>
                 </ul>
             </div>

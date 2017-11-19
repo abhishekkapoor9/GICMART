@@ -141,7 +141,6 @@ namespace gicmart.Controllers
             catch (Exception e1)
             {
                 ViewBag.Message = "Fail";
-<<<<<<< HEAD
                 //string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
                 //SqlConnection con = new SqlConnection(cs);
                 //con.Open();
@@ -194,7 +193,6 @@ namespace gicmart.Controllers
                 //int wq = cmd.ExecuteNonQuery();
                 //ViewBag.Message = string.Format("data inserted successfull");
                 //con.Close();
-=======
                 string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
@@ -247,7 +245,6 @@ namespace gicmart.Controllers
                 int wq = cmd.ExecuteNonQuery();
                 ViewBag.Message = string.Format("data inserted successfull");
                 con.Close();
->>>>>>> 9a74c8cf3862688ff8ebc0fd32a41909f9eca957
             }
             return View(usr);
         }

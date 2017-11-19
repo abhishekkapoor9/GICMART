@@ -164,11 +164,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\dashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\levelreportController.cs" />
     <Compile Include="Areas\Admin\Controllers\myrepurchageController.cs" />
     <Compile Include="Areas\Admin\Controllers\mysponsorController.cs" />
-    <Compile Include="Areas\Admin\Controllers\practiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\profileController.cs" />
     <Compile Include="Areas\Admin\Controllers\rewardController.cs" />
     <Compile Include="Areas\Admin\Controllers\sponsorlevelController.cs" />
@@ -207,6 +207,8 @@
     <Content Include="Images\3.jpg" />
     <Content Include="Images\4.jpg" />
     <Content Include="Images\5.jpg" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\6.png" />
     <Content Include="Images\8.jpg" />
     <Content Include="Images\a1.png" />
     <Content Include="Images\a2.png" />
@@ -374,13 +376,13 @@
     <Content Include="Areas\Admin\Views\profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Admin\Views\levelreport\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Areas\Admin\Views\myrepurchage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Admin\Views\practice\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\levelreport\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\dashboard\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
