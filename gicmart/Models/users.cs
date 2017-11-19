@@ -9,8 +9,11 @@ namespace gicmart.Models
     public class users
     {
         [Display(Name = "User Id")]
+<<<<<<< HEAD
         //[Required]
  
+=======
+>>>>>>> 10d877089640abff37ff7fb8814d4d50d4f5bed2
         [Required]
         public string userid { get; set; }//userid
         //[Display(Name = " sponsor id")]
@@ -19,8 +22,13 @@ namespace gicmart.Models
         [Display(Name = "Sponsor Name")]
         [Required]
         public string sponsorname { get; set; }//sponsorname
+<<<<<<< HEAD
  
         [Display(Name = "Pin No")]
+=======
+
+        [Display(Name = "PinNo")]
+>>>>>>> 10d877089640abff37ff7fb8814d4d50d4f5bed2
         [Required]
         public string pin { get; set; }//pin
         [Display(Name = "Name")]

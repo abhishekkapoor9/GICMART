@@ -71,7 +71,7 @@ namespace gicmart.Controllers
                         SqlCommand cmd1 = new SqlCommand(usersp, con);
                         cmd1.CommandType = CommandType.StoredProcedure;
 
-                        cmd1.Parameters.AddWithValue("@user_name", usr.pin);
+                        cmd1.Parameters.AddWithValue("@user_name", usr.userid);
                         cmd1.Parameters.AddWithValue("@role", "user");
                         cmd1.Parameters.AddWithValue("@user_pw", usr.password);
                         cmd1.Parameters.AddWithValue("@referenced_user_id", reference_user_id);
@@ -141,6 +141,7 @@ namespace gicmart.Controllers
             catch (Exception e1)
             {
                 ViewBag.Message = "Fail";
+<<<<<<< HEAD
                 //string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
                 //SqlConnection con = new SqlConnection(cs);
                 //con.Open();
@@ -245,6 +246,10 @@ namespace gicmart.Controllers
                 int wq = cmd.ExecuteNonQuery();
                 ViewBag.Message = string.Format("data inserted successfull");
                 con.Close();
+=======
+
+
+>>>>>>> 10d877089640abff37ff7fb8814d4d50d4f5bed2
             }
             return View(usr);
         }
@@ -302,20 +307,13 @@ namespace gicmart.Controllers
             SqlCommand cmd4 = new SqlCommand(usersp2, con);
             cmd4.CommandType = CommandType.StoredProcedure;
             cmd4.Parameters.AddWithValue("@sponserId", sponsorId);
-            //SqlParameter parm2 = new SqlParameter("@sponserName", SqlDbType.NVarChar,50);
-            //parm2.Direction = ParameterDirection.Output;
-            //cmd4.Parameters.Add(parm2);
-            // MISSINz
             try
             {
                 rdr = cmd4.ExecuteReader();
-
-                // iterate through results, printing each to console
                 while (rdr.Read())
                 {
                     sponserName= rdr["sponsor_name"].ToString();
                 }
-                //sponserName = parm2.Value.ToString();
             }
             catch (Exception e1)
             {
