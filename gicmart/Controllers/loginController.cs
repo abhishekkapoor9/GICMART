@@ -14,15 +14,11 @@ namespace gicmart.Controllers
     public class loginController : Controller
     {
         //
-<<<<<<< HEAD
         // GET: /lohin/
-
         public ActionResult Index()
         {
             return View();
         }
-
-=======
         // GET: /login/
         public class User
         {
@@ -52,7 +48,6 @@ namespace gicmart.Controllers
                 { return View("~/Areas/Admin/Views/Default/Index.cshtml"); }
                 else
                 { return View("~/Areas/User/Views/Default/Index.cshtml"); }
-
             }
             else
             {
@@ -86,7 +81,6 @@ namespace gicmart.Controllers
             rdr.Close();
             return (loginRole);
         }
->>>>>>> 10d877089640abff37ff7fb8814d4d50d4f5bed2
     }
 
 }

@@ -14,15 +14,12 @@
             content: " ";
             display: table;
         }
-
         .cf:after {
             clear: both;
         }
-
         .cf {
             *zoom: 1;
         }
-
         /* Mini reset, no margins, paddings or bullets */
         .menu,
         .submenu {
@@ -30,7 +27,6 @@
             padding: 0;
             list-style: none;
         }
-
         /* Main level */
         .menu {
           margin: 24px auto;
@@ -41,14 +37,12 @@ width: -webkit-fit-content;
 width: fit-content;
 margin-left: 4%;
         }
-
             .menu > li {
                 background: #34495e;
                 float: left;
                 position: relative;
                 transform: skewX(0deg);/*25*/
             }
-
             .menu a {
                 display: block;
                 color: #fff;
@@ -57,16 +51,13 @@ margin-left: 4%;
                 font-family: Arial, Helvetica;
                 font-size: 14px;
             }
-
             .menu li:hover {
                 background: #e74c3c;
             }
-
             .menu > li > a {
                 transform: skewX(0deg);/*-25*/
                 padding: 1em 2em;
             }
-
         /* Dropdown */
         .submenu {
             position: absolute;
@@ -76,17 +67,14 @@ margin-left: 4%;
             transform: skewX(0deg);/*-25*/
             transform-origin: left top;
         }
-
             .submenu li {
                 background-color: #34495e;
                 position: relative;
                 overflow: hidden;
             }
-
             .submenu > li > a {
                 padding: 1em 2em;
             }
-
             .submenu > li::after {
                 content: '';
                 position: absolute;
@@ -95,21 +83,17 @@ margin-left: 4%;
                 width: 100%;
                 box-shadow: 0 0 50px rgba(0, 0, 0, .9);
             }
-
             /* Odd stuff */
             .submenu > li:nth-child(odd) {
                 transform: skewX(0deg) translateX(0);/*-25*/
             }
-
                 .submenu > li:nth-child(odd) > a {
                     transform: skewX(0deg);/*25*/
                 }
-
                 .submenu > li:nth-child(odd)::after {
                     right: -50%;
                     transform: skewX(0deg) rotate(0deg);/*-25 3*/
                 }
-
             /* Even stuff */
             .submenu > li:nth-child(even) {
                 transform: skewX(0deg) translateX(0);/*25*/
@@ -130,7 +114,6 @@ margin-left: 4%;
                 opacity: 0;
                 visibility: hidden;
             }
-
                 .submenu li {
                     transition: .2s ease transform;
                 }
@@ -140,7 +123,6 @@ margin-left: 4%;
             opacity: 1;
             visibility: visible;
         }
-
             .menu > li:hover .submenu li:nth-child(even) {
                 transform: skewX(25deg) translateX(15px);/*25 15*/
             }
@@ -161,17 +143,13 @@ margin-left: 4%;
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
     $(document).ready(function() {
-
         // Dock the header to the top of the window when scrolled past the banner. This is the default behaviour.
-
         $('.header-two').scrollToFixed();
         // previous summary up the page.
-
         var summaries = $('.summary');
         summaries.each(function(i) {
             var summary = $(summaries[i]);
             var next = summaries[i + 1];
-
             summary.scrollToFixed({
                 marginTop: $('.header-two').outerHeight(true) + 10,
                 zIndex: 999
@@ -192,16 +170,13 @@ margin-left: 4%;
     <!-- smooth-scrolling-of-move-up -->
     <script type="text/javascript">
 		$(document).ready(function() {
-
 			var defaults = {
 				containerID: 'toTop', // fading element id
 				containerHoverID: 'toTopHover', // fading element hover id
 				scrollSpeed: 1200,
 				easingType: 'linear'
 			};
-
 			$().UItoTop({ easingType: 'easeOutQuart' });
-
 		});
     </script>
     <!-- //smooth-scrolling-of-move-up -->
@@ -210,7 +185,6 @@ margin-left: 4%;
     <!-- header -->
     <div class="header">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
         <div class="header-three">
             <!-- header-three -->
             <div class="container" style="padding: 0px;margin-left: 4%;width: 94%;"> 
@@ -244,7 +218,6 @@ margin-left: 4%;
     <div class="footer">
         <div class="container">
             <div class="footer-info w3-agileits-info">
-                
                 <div class="col-md-4 address-left agileinfo">
                     <div class="footer-logo header-logo">
                         <h2><a href="index-2.html"><span>G</span>ic <i>Mart</i></a></h2>
@@ -257,7 +230,6 @@ margin-left: 4%;
                         <li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@example.com</a></li>
                     </ul>
                 </div>
-
                 <div class="col-md-8 address-right">
                     <div class="col-md-4 footer-grids">
                         <h3>Company</h3>
@@ -268,8 +240,6 @@ margin-left: 4%;
                            @* <li><a href="@Url.Action("login", "login")">Login</a></li>*@
                             <li><a href="@Url.Action("home", "index")">Home</a></li>
                             <li><a href="@Url.Action("gallery", "gallery")">gallery</a></li>
-                            
-
                             @*<li><a href="values.html">Core Values</a></li>
                             <li><a href="privacy.html">Privacy Policy</a></li>*@
                         </ul>

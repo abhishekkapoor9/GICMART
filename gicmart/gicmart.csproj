@@ -170,10 +170,12 @@
     <Compile Include="Areas\Admin\Controllers\levelreportController.cs" />
     <Compile Include="Areas\Admin\Controllers\myrepurchageController.cs" />
     <Compile Include="Areas\Admin\Controllers\mysponsorController.cs" />
+    <Compile Include="Areas\Admin\Controllers\pindetailsController.cs" />
     <Compile Include="Areas\Admin\Controllers\profileController.cs" />
     <Compile Include="Areas\Admin\Controllers\rewardController.cs" />
     <Compile Include="Areas\Admin\Controllers\sponsorlevelController.cs" />
     <Compile Include="Areas\Admin\Controllers\welletterController.cs" />
+    <Compile Include="Areas\Admin\Models\changepw.cs" />
     <Compile Include="Areas\Admin\Models\profile.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -275,6 +277,7 @@
     <Content Include="Images\nucleo-icon-8.html" />
     <Content Include="Images\nucleo-icon-9.html" />
     <Content Include="Images\plan.jpg" />
+    <Content Include="Images\team_member2.png" />
     <Content Include="Images\wealth.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\custom.js" />
@@ -392,6 +395,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\changepassword\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\pindetails\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

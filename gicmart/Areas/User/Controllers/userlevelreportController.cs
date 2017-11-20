@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Data.EntityClient;
-using System.Data;
-using gicmart.Models;
 
-namespace gicmart.Areas.Admin.Controllers
+namespace gicmart.Areas.User.Controllers
 {
-    public class changepasswordController : Controller
+    public class userlevelreportController : Controller
     {
         //
-        // GET: /Admin/changepassword/
+        // GET: /User/userlevelreport/
 
         public ActionResult Index()
         {
