@@ -46,13 +46,13 @@ namespace gicmart.Controllers
                 ViewBag.Message = "Success";
                 if (user.Role=="Admin")
                 {
-                    TempData["userId"] = model.userName;
-                    return View("~/Areas/Admin/Views/Default/Index.cshtml");
+                    System.Web.HttpContext.Current.Session["userId"]  = model.userName;
+                    return RedirectToAction("index", "dashboard", new { area = "Admin" });
                 }
                 else
                 {
-                    TempData["userId"] = model.userName;
-                    return View("~/Areas/User/Views/Default/Index.cshtml");
+                    System.Web.HttpContext.Current.Session["userId"] = model.userName;
+                    return RedirectToAction("index", "userdashboard", new { area = "User" });
                 }
             }
             else

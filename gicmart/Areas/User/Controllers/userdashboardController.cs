@@ -13,6 +13,7 @@ namespace gicmart.Areas.User.Controllers
 
         public ActionResult Index()
         {
+            TempData["userId"] = System.Web.HttpContext.Current.Session["userId"];
             return View();
         }
 
