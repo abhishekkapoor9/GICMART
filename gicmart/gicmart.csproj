@@ -186,6 +186,7 @@
     <Compile Include="Areas\User\Controllers\userrewardController.cs" />
     <Compile Include="Areas\User\Controllers\usersponsorlevelController.cs" />
     <Compile Include="Areas\User\Controllers\userwelcomeletterController.cs" />
+    <Compile Include="Areas\User\Models\userprofile.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\businessplanController.cs" />
@@ -403,6 +404,15 @@
     <Content Include="Areas\User\Views\_master.cshtml" />
     <Content Include="Areas\Admin\Views\pin\usedPin.cshtml" />
     <Content Include="Areas\Admin\Views\pin\unUsedPin.cshtml" />
+    <Content Include="Areas\User\Views\userdashboard\Index.cshtml" />
+    <Content Include="Areas\User\Views\userlevelreport\Index.cshtml" />
+    <Content Include="Areas\User\Views\usermyrepurchage\Index.cshtml" />
+    <Content Include="Areas\User\Views\usermysponsor\Index.cshtml" />
+    <Content Include="Areas\User\Views\userprofile\Index.cshtml" />
+    <Content Include="Areas\User\Views\userreward\Index.cshtml" />
+    <Content Include="Areas\User\Views\usersponsorlevel\Index.cshtml" />
+    <Content Include="Areas\User\Views\userwelcomeletter\Index.cshtml" />
+    <Content Include="Areas\User\Views\Shared\_master.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -454,8 +464,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\User\Models\" />
-    <Folder Include="Areas\User\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
