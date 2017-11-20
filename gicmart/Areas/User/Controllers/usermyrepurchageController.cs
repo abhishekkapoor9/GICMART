@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace gicmart.Areas.Admin.Controllers
+namespace gicmart.Areas.User.Controllers
 {
-    public class practiceController : Controller
+    public class usermyrepurchageController : Controller
     {
         //
-        // GET: /Admin/practice/
+        // GET: /User/usermyrepurchage/
 
         public ActionResult Index()
         {

@@ -41,7 +41,7 @@
             background: #34495e;
             float: left;
             position: relative;
-            transform: skewX(25deg);
+            transform: skewX(0deg);/*25*/
         }
 
         .menu a {
@@ -58,7 +58,7 @@
         }
 
         .menu > li > a {
-            transform: skewX(-25deg);
+            transform: skewX(0deg);/*-25*/
             padding: 1em 2em;
         }
 
@@ -68,7 +68,7 @@
         width: 200px;
         left: 50%;
         margin-left: -100px;
-        transform: skewX(-25deg);
+        transform: skewX(0deg);/*-25*/
         transform-origin: left top;
     }
 
@@ -93,30 +93,30 @@
 
         /* Odd stuff */
         .submenu > li:nth-child(odd) {
-            transform: skewX(-25deg) translateX(0);
+            transform: skewX(0deg) translateX(0);/*-25*/
         }
 
             .submenu > li:nth-child(odd) > a {
-                transform: skewX(25deg);
+                transform: skewX(0deg);/*25*/
             }
 
             .submenu > li:nth-child(odd)::after {
                 right: -50%;
-                transform: skewX(-25deg) rotate(3deg);
+                transform: skewX(0deg) rotate(0deg);/*-25 3*/
             }
 
         /* Even stuff */
         .submenu > li:nth-child(even) {
-            transform: skewX(25deg) translateX(0);
+            transform: skewX(0deg) translateX(0);/*25*/
         }
 
             .submenu > li:nth-child(even) > a {
-                transform: skewX(-25deg);
+                transform: skewX(0deg);/*-25*/
             }
 
             .submenu > li:nth-child(even)::after {
                 left: -50%;
-                transform: skewX(25deg) rotate(3deg);
+                transform: skewX(deg) rotate(0deg);/*25 3*/
             }
 
         /* Show dropdown */
@@ -136,10 +136,10 @@
         visibility: visible;
     }
         .menu > li:hover .submenu li:nth-child(even) {
-            transform: skewX(25deg) translateX(15px);
+            transform: skewX(deg) translateX(px);/*25 15*/
         }
         .menu > li:hover .submenu li:nth-child(odd) {
-            transform: skewX(-25deg) translateX(-15px);
+            transform: skewX(0deg) translateX(0px);/*-25 -15*/
         }
 </style>
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>

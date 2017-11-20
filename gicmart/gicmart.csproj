@@ -164,19 +164,28 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\changepasswordController.cs" />
+    <Compile Include="Areas\Admin\Controllers\dashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\levelreportController.cs" />
     <Compile Include="Areas\Admin\Controllers\myrepurchageController.cs" />
     <Compile Include="Areas\Admin\Controllers\mysponsorController.cs" />
+<<<<<<< HEAD
+    <Compile Include="Areas\Admin\Controllers\pindetailsController.cs" />
+=======
     <Compile Include="Areas\Admin\Controllers\pinController.cs" />
     <Compile Include="Areas\Admin\Controllers\practiceController.cs" />
+>>>>>>> 496e80296dd94a79f68d24807e71c8a53a9f5694
     <Compile Include="Areas\Admin\Controllers\profileController.cs" />
     <Compile Include="Areas\Admin\Controllers\rewardController.cs" />
     <Compile Include="Areas\Admin\Controllers\sponsorlevelController.cs" />
     <Compile Include="Areas\Admin\Controllers\welletterController.cs" />
+    <Compile Include="Areas\Admin\Models\changepw.cs" />
+    <Compile Include="Areas\Admin\Models\profile.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\businessplanController.cs" />
+    <Compile Include="Controllers\changepasswordController.cs" />
     <Compile Include="Controllers\contactusController.cs" />
     <Compile Include="Controllers\galleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -209,6 +218,8 @@
     <Content Include="Images\3.jpg" />
     <Content Include="Images\4.jpg" />
     <Content Include="Images\5.jpg" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\6.png" />
     <Content Include="Images\8.jpg" />
     <Content Include="Images\a1.png" />
     <Content Include="Images\a2.png" />
@@ -271,6 +282,7 @@
     <Content Include="Images\nucleo-icon-8.html" />
     <Content Include="Images\nucleo-icon-9.html" />
     <Content Include="Images\plan.jpg" />
+    <Content Include="Images\team_member2.png" />
     <Content Include="Images\wealth.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\custom.js" />
@@ -319,7 +331,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
@@ -349,9 +360,6 @@
     <Content Include="Views\businessplan\mybusinessplan.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\login\login.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\contactus\contactus.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -376,13 +384,25 @@
     <Content Include="Areas\Admin\Views\profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Admin\Views\levelreport\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Areas\Admin\Views\myrepurchage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Admin\Views\practice\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\levelreport\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\dashboard\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\login\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\changepassword\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\changepassword\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\pindetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\pin\newPin.cshtml" />

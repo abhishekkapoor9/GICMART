@@ -14,7 +14,6 @@ namespace gicmart.Controllers
     {
         public string role;
         public bool status;
-        //
         // GET: /registration/
         public ActionResult register()
         {
@@ -30,7 +29,6 @@ namespace gicmart.Controllers
                     string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
-
                     string usersp2 = "sp_checkforPinStatus";
                     SqlCommand cmd4 = new SqlCommand(usersp2, con);
                     cmd4.CommandType = CommandType.StoredProcedure;
@@ -58,8 +56,6 @@ namespace gicmart.Controllers
                             {
                                 reference_user_id = rdr["user_id"].ToString();
                             }
-                            //sponserName = parm2.Value.ToString();
-                           
                         }
                         catch (Exception e1)
                         {
@@ -70,7 +66,6 @@ namespace gicmart.Controllers
                         string usersp = "user_sp";
                         SqlCommand cmd1 = new SqlCommand(usersp, con);
                         cmd1.CommandType = CommandType.StoredProcedure;
-
                         cmd1.Parameters.AddWithValue("@user_name", usr.userid);
                         cmd1.Parameters.AddWithValue("@role", "user");
                         cmd1.Parameters.AddWithValue("@user_pw", usr.password);
@@ -95,10 +90,14 @@ namespace gicmart.Controllers
                         cmd.Parameters.AddWithValue("@pancardno", usr.pancardno);
                         cmd.Parameters.AddWithValue("@mobileno", usr.mobileno);
                         int wq = cmd.ExecuteNonQuery();
+<<<<<<< HEAD
+                        // getting SponserId
+=======
 
 
                         // getting PinId
 
+>>>>>>> 496e80296dd94a79f68d24807e71c8a53a9f5694
                         string pinsp = "pin_sp";
                         SqlCommand cmd11 = new SqlCommand(pinsp, con);
                         SqlParameter parm1 = new SqlParameter("@pin_no", SqlDbType.NVarChar, 50);
@@ -117,14 +116,18 @@ namespace gicmart.Controllers
                         cmd2.Parameters.AddWithValue("@sponsor_id", usr.sponsorid);
                         cmd2.Parameters.AddWithValue("@pin_no", pinNo);
                         int w = cmd2.ExecuteNonQuery();
+<<<<<<< HEAD
+=======
 
                         //For Update Pin
+>>>>>>> 496e80296dd94a79f68d24807e71c8a53a9f5694
                         string updatePin  = "sp_updatePinNo";
                         SqlCommand cmd8 = new SqlCommand(updatePin, con);
                         cmd8.CommandType = CommandType.StoredProcedure;
                         cmd8.Parameters.AddWithValue("@pin_No", usr.pin);
-
                         int w9 = cmd8.ExecuteNonQuery();
+<<<<<<< HEAD
+=======
 
                         string userPin = "sp_setuserpin";
                         SqlCommand cmd10 = new SqlCommand(userPin, con);
@@ -135,6 +138,7 @@ namespace gicmart.Controllers
 
                         int w10 = cmd10.ExecuteNonQuery();
 
+>>>>>>> 496e80296dd94a79f68d24807e71c8a53a9f5694
                         ViewBag.Message = "Success";
                         con.Close();
                         usr = null;                    }
@@ -145,19 +149,66 @@ namespace gicmart.Controllers
                 }
                 else
                 {
-
                     ViewBag.Message = "Fail";
                 }
             }
             catch (Exception e1)
             {
-                ViewBag.Message = "Fail";
-
-
+                ViewBag.Message = "Fail";    
+                string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                //getting pin_no
+                string pinsp = "pin_sp";
+                SqlCommand cmd1 = new SqlCommand(pinsp, con);
+                SqlParameter parm1 = new SqlParameter("@pin_no", SqlDbType.NVarChar,50);
+                parm1.Direction = ParameterDirection.Output;
+                cmd1.Parameters.Add(parm1);
+                cmd1.CommandType = CommandType.StoredProcedure;
+                cmd1.ExecuteNonQuery(); // MISSING
+                string retunvalue1 = parm1.Value.ToString();
+                //getting user_id
+                string usersp = "user_sp";
+                SqlCommand cmd2 = new SqlCommand(usersp, con);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.Parameters.AddWithValue("@password", usr.password);
+                cmd2.Parameters.AddWithValue("@name", usr.name);
+                cmd2.Parameters.AddWithValue("@role", "user");
+                SqlParameter parm2 = new SqlParameter("@user_id", SqlDbType.NVarChar, 50);
+                parm2.Direction = ParameterDirection.Output;
+                cmd2.Parameters.Add(parm2);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.ExecuteNonQuery(); // MISSING
+                string retunvalue2 = parm2.Value.ToString();
+                //getting sponsor_id
+                string sponsorsp = "sponsor_sp";
+                SqlCommand cmd3 = new SqlCommand(sponsorsp, con);
+                cmd3.CommandType = CommandType.StoredProcedure;
+                cmd3.Parameters.AddWithValue("@sponsorname", usr.sponsorname);
+                int spi = cmd3.ExecuteNonQuery();
+                //getting user details
+                string registersp = "registration_sp";
+                SqlCommand cmd = new SqlCommand(registersp, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@userid", usr.userid);
+                cmd.Parameters.AddWithValue("@address", usr.address);
+                cmd.Parameters.AddWithValue("@password", usr.password);
+                cmd.Parameters.AddWithValue("@sponsorid", usr.sponsorid);
+                cmd.Parameters.AddWithValue("@sponsorname", usr.sponsorname);
+                cmd.Parameters.AddWithValue("@pin",usr.pin);
+                cmd.Parameters.AddWithValue("@name", usr.name);
+                cmd.Parameters.AddWithValue("@nomineename", usr.nomineename);
+                cmd.Parameters.AddWithValue("@state", usr.state);
+                cmd.Parameters.AddWithValue("@city", usr.city);
+                cmd.Parameters.AddWithValue("@pancardno", usr.pancardno);
+                cmd.Parameters.AddWithValue("@mobileno", usr.mobileno);
+                cmd.Parameters.AddWithValue("@terandcontion", usr.termandcondition);
+                int wq = cmd.ExecuteNonQuery();
+                ViewBag.Message = string.Format("data inserted successfull");
+                con.Close();
             }
             return View(usr);
         }
-
         [HttpPost]
         public JsonResult GetPinStatus(string pinId)
         {
@@ -197,7 +248,6 @@ namespace gicmart.Controllers
             };
             return Json(data, JsonRequestBehavior.AllowGet);
         }
-
         [HttpPost]
         public JsonResult GetSponsorName(string sponsorId)
         {

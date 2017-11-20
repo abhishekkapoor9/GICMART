@@ -14,6 +14,11 @@ namespace gicmart.Controllers
     public class loginController : Controller
     {
         //
+        // GET: /lohin/
+        public ActionResult Index()
+        {
+            return View();
+        }
         // GET: /login/
         public class User
         {
@@ -43,7 +48,6 @@ namespace gicmart.Controllers
                 { return View("~/Areas/Admin/Views/Default/Index.cshtml"); }
                 else
                 { return View("~/Areas/User/Views/Default/Index.cshtml"); }
-
             }
             else
             {
