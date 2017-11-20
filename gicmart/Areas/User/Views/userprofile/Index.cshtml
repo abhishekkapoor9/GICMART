@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/User/Views/Shared/_master.cshtml";
+}
+
+<div class="container" style="width:auto;padding-left:-300px;background-color:red">
+     <div class="rows" style="height:60px;background-color:#3366cc;width:1354px;margin-left:-20px;margin-right:10px;text-align:center">
+          <div class="col-md-4" style="color:whitesmoke;margin-top:20px">
+               <h3>PROFILE</h3>
+          </div>
+          <div class="col-md-4"  style="color:whitesmoke;margin-top:20px">
+               <h4><b>Welcome Ganesh Upadhyay</b></h4>
+          </div>
+          <div class="col-md-4"  style="color:whitesmoke;margin-top:20px">
+               <h5><b>User ID : </b>GIC619136</h5>
+          </div>
+     </div>
+</div>
+<!--page title end-->
+<br />
+<section class="content" style=" ">
+         <div class="row mar_gin" style="width:1364px">
+              <div class="col-md-8 col-md-offset-2" style=" ">
+                   <div id="basic-data" class="form-wizard active"><br />
+                        <h4 class="col-md-12"><b>Your Profile</b></h4><br /><br />
+                        <div class="col-md-6">
+                        <div class="form-group">
+                             <label>Sponsor ID</label>
+                             <input type="text" placeholder="Enter Sponsor ID" readonly="readonly" value="GIC983103" class="form-control">
+                        </div>
+                   </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Pin</label>
+                <input type="text" placeholder="Enter Pin" readonly value="6497D15575" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>User ID</label>
+                <input type="text" placeholder="Enter User ID" readonly value=GIC619136 class="form-control">
+            </div>
+        </div>
+		 <div class="col-md-12">
+        <div class="col-md-12">
+            <h4>Basic Information</h4>	
+			
+
+        </div>
+		
+		</div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter Name" readonly value="GANESH UPADHYAY" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+						
+                <label>Mobile Number</label>
+                <input type="text" placeholder="Enter Mobile Number" readonly value="75****1721" class="form-control">
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" readonly value="123456" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label " for=""> Pan Card Number </label>
+                <input  class="form-control" placeholder="Enter Pan Card Number .." name="txtpan"
+			 value="BIBPG3120M"  type="text">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label " for=""> Nominee Name </label>
+                <input  class="form-control" placeholder="Enter Nominee Name .." name="txtnomini"
+			 value="YASHODA"  type="text">
+            </div>
+        </div>
+<div class="col-md-6">
+            <div class="form-group">
+                <label>Address</label>
+                <textarea class="form-control" name ="txtaddress" rows="5" >GANESH UPADHYAY                                     
+BADRIYA SORON KASGANJ UP</textarea>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" placeholder="Enter City" name="txtcity"  value="SORON KASGANJ" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>State</label>
+                <input type="text" placeholder="Enter State" name="txtstate"   value="UTTARPRADESH" class="form-control">
+            </div>
+        </div>
+        <h4 class="col-md-12"> Update Bank Information </h4>
+		<div class="col-md-12">
+			Last Update Bank Detail:&nbsp;&nbsp;&nbsp;17-08-2017&nbsp;&nbsp;&nbsp;<a href="viewbank.php?memberid=" style="background:red;color:#fff;padding:2px;border-radius: 7px;">View</a><br><br></h4>
+		</div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label " for=""> Holder Name </label>
+                <input   readonly  class="form-control" placeholder="Enter Holder Name .." name="txtholder"
+			 value="GANESH UPADHYAY"  type="text">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label " for=""> Account Number </label>
+                <input  readonly   class="form-control" placeholder="Enter Bank Account Number .." name="txtaccountno"
+			 value="11582119625"  type="text">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" for="">IFSC Code</label>
+                <input  readonly  value="SBIN0003959" class="form-control" placeholder="Enter IFSC Code.." name="txtifsc" 
+                       type="text">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" for="">Bank Name</label>
+                <input  readonly    value="SBI SORON " class="form-control" placeholder="Enter Bank Name.." name="txtbank" 
+                       type="text">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" for="">Profile Photo</label>
+                <input type="file" name="pimage" id="pimage" class="form-control" />
+            </div>
+        </div>
+		<div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" for="">KYC Photo</label>
+                <input type="file" name="kyc" id="pimage" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="submit" name="updateprofile" class="btn btn-primary" value="Submit Now" />
+            </div>
+        </div>
+    </div>
+
+</form>            </div>
+        </div>
+
+
