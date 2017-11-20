@@ -170,7 +170,12 @@
     <Compile Include="Areas\Admin\Controllers\levelreportController.cs" />
     <Compile Include="Areas\Admin\Controllers\myrepurchageController.cs" />
     <Compile Include="Areas\Admin\Controllers\mysponsorController.cs" />
+<<<<<<< HEAD
     <Compile Include="Areas\Admin\Controllers\pindetailsController.cs" />
+=======
+    <Compile Include="Areas\Admin\Controllers\pinController.cs" />
+    <Compile Include="Areas\Admin\Controllers\practiceController.cs" />
+>>>>>>> 496e80296dd94a79f68d24807e71c8a53a9f5694
     <Compile Include="Areas\Admin\Controllers\profileController.cs" />
     <Compile Include="Areas\Admin\Controllers\rewardController.cs" />
     <Compile Include="Areas\Admin\Controllers\sponsorlevelController.cs" />
@@ -398,6 +403,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\pindetails\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\pin\newPin.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
