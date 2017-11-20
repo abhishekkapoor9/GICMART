@@ -45,9 +45,15 @@ namespace gicmart.Controllers
                 HttpContext.Response.Cookies.Add(authCookie);
                 ViewBag.Message = "Success";
                 if (user.Role=="Admin")
-                { return View("~/Areas/Admin/Views/Default/Index.cshtml"); }
+                {
+                    TempData["userId"] = model.userName;
+                    return View("~/Areas/Admin/Views/Default/Index.cshtml");
+                }
                 else
-                { return View("~/Areas/User/Views/Default/Index.cshtml"); }
+                {
+                    TempData["userId"] = model.userName;
+                    return View("~/Areas/User/Views/Default/Index.cshtml");
+                }
             }
             else
             {
