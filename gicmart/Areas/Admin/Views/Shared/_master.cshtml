@@ -46,7 +46,7 @@
                 background: #34495e;
                 float: left;
                 position: relative;
-                transform: skewX(0deg);/*25*/
+                transform: skewX(0deg); /*25*/
             }
 
             .menu a {
@@ -63,29 +63,30 @@
             }
 
             .menu > li > a {
-                transform: skewX(0deg);/*-25*/
+                transform: skewX(0deg); /*-25*/
                 padding: 1em 2em;
             }
 
         /* Dropdown */
         .submenu {
-            position:absolute;
-            width: 220px;/*200*/
-            left:45%;/*50%*/
+            position: absolute;
+            width: 220px; /*200*/
+            left: 45%; /*50%*/
             margin-left: -100px;
-            transform: skewX(0deg);/*-25*/
+            transform: skewX(0deg); /*-25*/
             transform-origin: left top;
         }
 
             .submenu li {
                 background-color: #34495e;
-                position:relative;/*relative*/
+                position: relative; /*relative*/
                 overflow: hidden;
             }
 
             .submenu > li > a {
-                padding: 1em 1em;/*1,2*/
+                padding: 1em 1em; /*1,2*/
             }
+
             .submenu > li::after {
                 content: '';
                 position: absolute; /* absolute  */
@@ -97,30 +98,30 @@
 
             /* Odd stuff */
             .submenu > li:nth-child(odd) {
-                transform: skewX(0deg) translateX(0);/*-25*/
+                transform: skewX(0deg) translateX(0); /*-25*/
             }
 
                 .submenu > li:nth-child(odd) > a {
-                    transform: skewX(0deg);/*25*/
+                    transform: skewX(0deg); /*25*/
                 }
 
                 .submenu > li:nth-child(odd)::after {
-                    right: 0%;/*-50%*/
+                    right: 0%; /*-50%*/
                     transform: skewX(0deg) rotate(3deg); /*-25*/
                 }
 
             /* Even stuff */
             .submenu > li:nth-child(even) {
-                transform: skewX(0deg) translateX(0);/*25*/
+                transform: skewX(0deg) translateX(0); /*25*/
             }
 
                 .submenu > li:nth-child(even) > a {
-                    transform: skewX(0deg);/*-25*/
+                    transform: skewX(0deg); /*-25*/
                 }
 
                 .submenu > li:nth-child(even)::after {
-                    left: 0%;/*-50%*/
-                    transform: skewX(0deg) rotate(3deg);/*25*/
+                    left: 0%; /*-50%*/
+                    transform: skewX(0deg) rotate(3deg); /*25*/
                 }
 
             /* Show dropdown */
@@ -141,11 +142,11 @@
         }
 
             .menu > li:hover .submenu li:nth-child(even) {
-                transform: skewX(0deg) translateX(0px);/*25*//*-15*/
+                transform: skewX(0deg) translateX(0px); /*25*/ /*-15*/
             }
 
             .menu > li:hover .submenu li:nth-child(odd) {
-                transform: skewX(0deg) translateX(0px);/*-25*//*-15*/
+                transform: skewX(0deg) translateX(0px); /*-25*/ /*-15*/
             }
     </style>
     <script type="application/x-javascript">
@@ -159,7 +160,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function () {          
+        $(document).ready(function () {
             $('.header-two').scrollToFixed();
             // previous summary up the page.
             var summaries = $('.summary');
@@ -197,7 +198,7 @@
 
         });
     </script>
-    
+
 </head>
 <body>
     <!-- header -->
@@ -215,24 +216,32 @@
                     <li><a href="@Url.Action("index", "dashboard")">Home</a></li>
                     <li style="z-index: 9999"><a href="@Url.Action("#","#")">PIN POINT DETAILS</a></li>
 
-                    <li style="z-index: 9999"><a href="@Url.Action("", "")">MY TEAM</a>
-                       <ul class="submenu" style="z-index: 9999">
+                    <li style="z-index: 9999">
+                        <a href="@Url.Action("", "")">MY TEAM</a>
+                        <ul class="submenu" style="z-index: 9999">
                             <li><a href="@Url.Action("Index", "levelreport")">NON WORKING LEVEL</a></li>
                             <li><a href="@Url.Action("Index", "myrepurchage")">MY RE-JOIN ENTRY</a></li>
-                            <li><a href="@Url.Action("Index", "mysponsor")" style=" font-style:initial">MY SPONSOR</a></li> 
-                            <li><a href="@Url.Action("Index", "sponsorlevel")" style=" font-style:initial">GENERATION</a></li>   
+                            <li><a href="@Url.Action("Index", "mysponsor")" style=" font-style:initial">MY SPONSOR</a></li>
+                            <li><a href="@Url.Action("Index", "sponsorlevel")" style=" font-style:initial">GENERATION</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="@Url.Action("Index", "reward")">E-PIN</a></li>
+                    <li><a href="@Url.Action("newPin", "pin")">E-PIN</a>
+                        <ul class="submenu" style="z-index: 9999">
+                            <li><a href="@Url.Action("newPin", "pin")">Generate Pin</a></li>
+                            <li><a href="@Url.Action("unUsedPin", "pin")" style=" font-style:initial">Old Pin</a></li>
+                            <li><a href="@Url.Action("usePin","pin")" style="font-style:initial">New Pin</a></li>
+                        </ul>
+                    </li>
                     <li><a href="@Url.Action("Index", "reward")">REWARDS</a></li>
 
-                    <li style="z-index: 9999"><a href="@Url.Action("", "")">ACCOUNT</a>
-                         <ul class="submenu" style="z-index: 9999">
+                    <li style="z-index: 9999">
+                        <a href="@Url.Action("", "")">ACCOUNT</a>
+                        <ul class="submenu" style="z-index: 9999">
                             <li><a href="@Url.Action("Index", "welletter")">WELECOME LETTER</a></li>
                             @*<li><a href="@Url.Action("Index", "myrepurchage")">ACCOUNT SETTING</a></li>*@
-                            <li><a href="@Url.Action("Index", "profile")" style=" font-style:initial">PROFILE</a></li>                                      
-                            <li><a href="@Url.Action("Index","changepassword")" style=" font-style:initial">CHANGE PASSWORD</a></li>   
+                            <li><a href="@Url.Action("Index", "profile")" style=" font-style:initial">PROFILE</a></li>
+                            <li><a href="@Url.Action("Index","changepassword")" style=" font-style:initial">CHANGE PASSWORD</a></li>
                         </ul>
                     </li>
 
@@ -241,10 +250,23 @@
             </div>
         </div>
     </div>
+    <div class="hs_page_title" style="background-color:lightskyblue;margin-top:0px;height:100px;text-align:center">
+        <div class="container">
+            <div class="col-md-4" style="margin-top:40px">
+                <h3>{{}}</h3>
+            </div>
+            <div class="col-md-4" style="margin-top:40px">
+                <h4><b>Welcome {{}}</b></h4>
+            </div>
+            <div class="col-md-4" style="margin-top:40px">
+                <h5><b>User ID : </b>@TempData["userId"]</h5>
+            </div>
+        </div>
+    </div>
     <div class="container">
         @*@RenderBody()*@
     </div>
-   
+
     <div id="body" style="height: auto">
         @RenderSection("body", required: false)
         <section class="content-wrapper main-content clear-fix">
@@ -252,7 +274,7 @@
         </section>
     </div>
 
-    
+
     <!-- //footer -->
     <div class="copy-right" style="">
         <div class="container" style="">
