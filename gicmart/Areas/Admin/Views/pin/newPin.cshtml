@@ -1,5 +1,64 @@
-﻿@{
+﻿@model gicmart.Models.users
+@{
     ViewBag.Title = "newPin";
     Layout = "~/Areas/Admin/Views/Shared/_master.cshtml";
 }
 
+@using (@Html.BeginForm("Index", "AddCard", FormMethod.Post))
+{
+    <div class="col-sm-12">
+        <div class="widget-box transparent">
+            <div class="widget-header widget-header-flat">
+                <h4 class="widget-title lighter">
+                    <i class="ace-icon fa fa-signal"></i>
+                    Generate New Pin
+                </h4>
+
+                <div class="widget-toolbar">
+                    <a href="#" data-action="collapse">
+                        <i class="ace-icon fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <div class="row" style="margin-top:3% !important">
+                    @*<div class="form-control">*@
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        @* <input type="text" id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" />*@
+                        @Html.TextBoxFor(m => m.pin, null, new { @id = "txt_cardNo", @class = "col-md-4", placeholder = "Card No", style = "width:100%",@readonly = "readonly", })
+                    </div>
+                    @*</div>*@
+                </div>
+                <div class="row" style="margin-top:3% !important">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <input type="submit" value="Generate" name="submit_login" class="btn btn-info" onclick='' />
+                        &nbsp; &nbsp; &nbsp;
+                        <input type="reset" value="Reset" name="reset_login" class="btn btn-info" onclick='' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="widget-box transparent">
+            <div class="widget-header widget-header-flat">
+                <h4 class="widget-title lighter">
+                    <i class="ace-icon fa fa-signal"></i>
+                    Data
+                </h4>
+
+                <div class="widget-toolbar">
+                    <a href="#" data-action="collapse">
+                        <i class="ace-icon fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="widget-body">
+                <table id="jqGrid_addCard"></table>
+                <div id="jqControls_addCard"></div>
+            </div><!-- /.widget-body -->
+        </div>
+    </div>
+}
