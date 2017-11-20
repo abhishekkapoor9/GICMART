@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_master.cshtml";
+}
+<!--page title start-->
+<div class="hs_page_title" style="background-color:lightskyblue;margin-top:0px;height:100px;text-align:center">
+     <div class="container">
+          <div class="col-md-4" style="margin-top:40px">
+               <h3>Change Password</h3>
+          </div>
+          <div class="col-md-4" style="margin-top:40px">
+               <h4><b>Welcome Ganesh Upadhyay</b></h4>
+          </div>
+          <div class="col-md-4" style="margin-top:40px">
+               <h5><b>User ID : </b>GIC619136</h5>
+          </div>
+     </div>
+</div>
+<!--page title end-->
+@using(Html.BeginForm("Index","changepassword",FormMethod.Get))
+{
+  <section class="content" style="margin-top:100px;height:269px">
+           <div class="row mar_gin" style="width:1381px">         
+                <div class="col-md-12" style="width:1381px">
+                           <div class="form-group col-md-12" style="">
+                             
+                                <label class="control-label col-sm-3" for="email">Old Password:</label>
+                                <div class="col-sm-6">
+                                      <input class="form-control" id="" name="password" required placeholder="Enter OLD Passwoord" type="text">
+                                </div>
+                           </div>
+                           <div class="form-group col-md-12">
+                                <label class="control-label col-sm-3" for="pwd">New Password:</label>
+                                <div class="col-sm-6">
+                                     <input class="form-control" id="pwd" name="passwd" required placeholder="Enter New Password" type="password">
+                                </div>
+                           </div>
+                <div class="form-group col-md-12">
+                     <label class="control-label col-sm-3" for="pwd">Conform Password:</label>
+                     <div class="col-sm-6">
+                          <input class="form-control" id=""  name="cpasswd" required placeholder="Conform New Password" type="password">
+                     </div>
+                </div>
+                <div class="form-group col-md-12">
+                     <div class="next-btn">
+                          <input type="submit" name="submit" class="btn btn-primary col-md-offset-4" value="Update Now" >
+                     </div>
+                </div>
+          </div>
+        </div>
+
+</section>
+}
+
+
