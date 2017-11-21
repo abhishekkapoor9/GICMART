@@ -22,11 +22,15 @@ namespace gicmart.Areas.Admin.Controllers
 
         public ActionResult newPin()
         {
+            TempData["userId"] = System.Web.HttpContext.Current.Session["userId"];
+            TempData["userName"] = System.Web.HttpContext.Current.Session["userName"];
+            ViewBag.sectionName = "Generate Pin";
             return View();
         }
         [HttpPost]
         public JsonResult GetPinNo()
         {
+
             string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
             SqlConnection con = new SqlConnection(cs);
             con.Open();
@@ -111,6 +115,9 @@ namespace gicmart.Areas.Admin.Controllers
 
         public ActionResult usedPin()
         {
+            TempData["userId"] = System.Web.HttpContext.Current.Session["userId"];
+            TempData["userName"] = System.Web.HttpContext.Current.Session["userName"];
+            ViewBag.sectionName = "Used Pin";
             return View();
         }
 
@@ -169,6 +176,9 @@ namespace gicmart.Areas.Admin.Controllers
 
         public ActionResult unUsedPin()
         {
+            TempData["userId"] = System.Web.HttpContext.Current.Session["userId"];
+            TempData["userName"] = System.Web.HttpContext.Current.Session["userName"];
+            ViewBag.sectionName = "UnUsed Pin";
             return View();
         }
 

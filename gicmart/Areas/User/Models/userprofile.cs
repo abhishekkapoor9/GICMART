@@ -20,10 +20,10 @@ namespace gicmart.Areas.User.Models
         public string address { get; set; }
         public string state { get; set; }
         public string city { get; set; }
-        //public string holdername { get; set; }
-        //public int accountno { get; set; }
-        //public string bankname { get; set; }
-        //public string ifsccode { get; set; }
+        public string holdername { get; set; }
+        public int accountno { get; set; }
+        public string bankname { get; set; }
+        public string ifsccode { get; set; }
 
     }
 }

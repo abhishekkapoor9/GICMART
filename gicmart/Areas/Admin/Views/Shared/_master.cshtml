@@ -209,7 +209,8 @@
             <!-- header-three -->
             <div class="container" style="padding: 0px; margin-left: 4%; width: 94%;">
                 <div class="header-logo">
-                    <h1><a href="~/Images/index-2.html"><span>G</span>ic <i>Mart</i></a></h1>
+                    
+                    <<h1><a href="@Url.Action("Index", "dashboard", new { Area = "Admin" })"><span>E</span>nkred Signal India <i>Mart</i></a></h1>
                     <h6>Your stores. Your place.</h6>
                 </div>
                 <ul class="menu cf" style="z-index: 9999">
@@ -245,27 +246,23 @@
                         </ul>
                     </li>
 
-                    <li><a href="@Url.Action("register", "registration")">LOGOUT</a></li>
+                    <li><a href="@Url.Action("Index", "Home" , new { Area = "" })">LOGOUT</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="hs_page_title" style="background-color:lightskyblue;margin-top:0px;height:100px;text-align:center">
-        <div class="container">
-            <div class="col-md-4" style="margin-top:40px">
-                <h3>{{}}</h3>
-            </div>
-            <div class="col-md-4" style="margin-top:40px">
-                <h4><b>Welcome {{}}</b></h4>
-            </div>
-            <div class="col-md-4" style="margin-top:40px">
-                <h5><b>User ID : </b>@TempData["userId"]</h5>
-            </div>
+    <div class="rows" style="height:100px;background-color:#3366cc;width:100%">
+        <div class="col-md-4" style="color:whitesmoke;margin-top:15px;text-align:center">
+            <h3>@ViewBag.sectionName</h3>
+        </div>
+        <div class="col-md-4" style="color:whitesmoke;margin-top:20px;text-align:center">
+            <h4><b>Welcome  @TempData["userName"]</b></h4>
+        </div>
+        <div class="col-md-4" style="color:whitesmoke;margin-top:20px;text-align:center">
+            <h5><b>User ID : </b>@TempData["userId"]</h5>
         </div>
     </div>
-    <div class="container">
-        @*@RenderBody()*@
-    </div>
+    
 
     <div id="body" style="height: auto">
         @RenderSection("body", required: false)
@@ -278,7 +275,7 @@
     <!-- //footer -->
     <div class="copy-right" style="">
         <div class="container" style="">
-            <p>© 2016 Smart bazaar . All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts.</a></p>
+            <p>© 2017 Enkred Signal India Mart . All rights reserved | Design by <a href="#">Enkred Signal India Mart</a></p>
         </div>
     </div>
 </body>

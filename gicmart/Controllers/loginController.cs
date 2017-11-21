@@ -26,6 +26,7 @@ namespace gicmart.Controllers
             public string Role { get; set; }
             public string Password { get; set; }
             public int? UserId { get; set; }
+            public string joinDate { get; set; }
         }
         public ActionResult login()
         {
@@ -47,11 +48,15 @@ namespace gicmart.Controllers
                 if (user.Role=="Admin")
                 {
                     System.Web.HttpContext.Current.Session["userId"]  = model.userName;
+                    System.Web.HttpContext.Current.Session["userName"] = user.UserName;
+                    System.Web.HttpContext.Current.Session["joindate"] = user.joinDate;
                     return RedirectToAction("index", "dashboard", new { area = "Admin" });
                 }
                 else
                 {
                     System.Web.HttpContext.Current.Session["userId"] = model.userName;
+                    System.Web.HttpContext.Current.Session["userName"] = user.UserName;
+                    System.Web.HttpContext.Current.Session["joindate"] = user.joinDate;
                     return RedirectToAction("index", "userdashboard", new { area = "User" });
                 }
             }
@@ -65,6 +70,8 @@ namespace gicmart.Controllers
         {
             string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
             string role = null;
+            string userName = null;
+            string date = null;
             SqlConnection con = new SqlConnection(cs);
             con.Open();
             int status = 0;
@@ -79,10 +86,14 @@ namespace gicmart.Controllers
             while (rdr.Read())
             {
                 role = rdr["role"].ToString();
+                userName = rdr["name"].ToString();
+                date = rdr["assignedDate"].ToString();   
             }
             var loginRole = new User
             {
-                Role = role
+                Role = role,
+                UserName = userName,
+                joinDate=date
             };
             rdr.Close();
             return (loginRole);

@@ -16,6 +16,9 @@ namespace gicmart.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
+            TempData["userId"] = System.Web.HttpContext.Current.Session["userId"];
+            TempData["userName"] = System.Web.HttpContext.Current.Session["userName"];
+            ViewBag.sectionName = "Change Password";
             return View();
         }
 

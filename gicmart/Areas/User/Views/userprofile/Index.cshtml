@@ -4,8 +4,6 @@
     Layout = "~/Areas/User/Views/Shared/_master.cshtml";
 }
 
-
-</div>
 <!--page title end-->
 <br />
 @using (Html.BeginForm("userprofile", "userprofile", FormMethod.Post))
@@ -87,7 +85,7 @@
                                  @Html.TextBoxFor(m => m.state, new { @class="form-control",required = "required" })
                             </div>
                        </div>
-                       @*<h4 class="col-md-12"> Update Bank Information </h4>
+                       <h4 class="col-md-12"> Update Bank Information </h4>
 		               <div class="col-md-12">
 			                Last Update Bank Detail:&nbsp;&nbsp;&nbsp;17-08-2017&nbsp;&nbsp;&nbsp;<a href="viewbank.php?memberid=" style="background:red;color:#fff;padding:2px;border-radius:7px">View</a>
 		               </div>
@@ -128,7 +126,7 @@
                                  @Html.TextBoxFor(m => m.name, new { @class="form-control",required = "required" })
                                  <input type="file" name="kyc" id="pimage" class="form-control" />
                             </div>
-                       </div>*@
+                       </div>
                        <div class="col-md-12">
                             <div class="form-group">
 

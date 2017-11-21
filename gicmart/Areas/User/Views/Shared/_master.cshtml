@@ -209,8 +209,8 @@
             <!-- header-three -->
             <div class="container" style="padding: 0px; margin-left: 4%; width: 94%;">
                 <div class="header-logo">
-                    <h1><a href="~/Images/index-2.html"><span>G</span>ic <i>Mart</i></a></h1>
-                    <h6>Your stores. Your place.</h6>
+                    <h1><a href="@Url.Action("Index", "userdashboard", new { Area = "User" })"><span>E</span>nkred Signal India <i>Mart</i></a></h1>
+                    <h6>Enkred Signal India Mart.</h6>
                 </div>
                 <ul class="menu cf" style="z-index: 9999">
                     <li><a href="@Url.Action("Index", "userdashboard")">Home</a></li>
@@ -218,36 +218,35 @@
 
                     <li style="z-index: 9999"><a href="@Url.Action("", "")">MY TEAM</a>
                        <ul class="submenu" style="z-index: 9999">
-                            <li><a href="@Url.Action("Index", "userlevelreport")">NON WORKING LEVEL</a></li>
-                            <li><a href="@Url.Action("Index", "usermyrepurchage")">MY RE-JOIN ENTRY</a></li>
-                            <li><a href="@Url.Action("Index", "usermysponsor")" style=" font-style:initial">MY SPONSOR</a></li> 
-                            <li><a href="@Url.Action("Index", "usersponsorlevel")" style=" font-style:initial">GENERATION</a></li>   
+                            <li><a href="@Url.Action("Index", "userlevelreport", new { Area = "User" })">NON WORKING LEVEL</a></li>
+                            <li><a href="@Url.Action("Index", "usermyrepurchage",new { Area = "User" }))">MY RE-JOIN ENTRY</a></li>
+                            <li><a href="@Url.Action("Index", "usermysponsor",new { Area = "User" }))" style=" font-style:initial">MY SPONSOR</a></li> 
+                            <li><a href="@Url.Action("Index", "usersponsorlevel",new { Area = "User" }))" style=" font-style:initial">GENERATION</a></li>   
                         </ul>
                     </li>
 
-                    <li><a href="@Url.Action("Index", "userreward")">E-PIN</a></li>
-                    <li><a href="@Url.Action("Index", "userreward")">REWARDS</a></li>
+                    <li><a href="@Url.Action("Index", "userreward", new { Area = "User" })">E-PIN</a></li>
+                    <li><a href="@Url.Action("Index", "userreward", new { Area = "User" })">REWARDS</a></li>
 
                     <li style="z-index: 9999"><a href="@Url.Action("", "")">ACCOUNT</a>
                          <ul class="submenu" style="z-index: 9999">
-                            <li><a href="@Url.Action("Index", "userwelcomeletter")">WELECOME LETTER</a></li>
+                            <li><a href="@Url.Action("Index", "userwelcomeletter", new { Area = "User" })">WELECOME LETTER</a></li>
                             @*<li><a href="@Url.Action("Index", "myrepurchage")">ACCOUNT SETTING</a></li>*@
-                            <li><a href="@Url.Action("Index", "userprofile")" style=" font-style:initial">PROFILE</a></li>                                      
-                            <li><a href="@Url.Action("Index","userchangepassword")" style=" font-style:initial">CHANGE PASSWORD</a></li>   
+                            <li><a href="@Url.Action("Index", "userprofile", new { Area = "User" })" style=" font-style:initial">PROFILE</a></li>                                      
+                            <li><a href="@Url.Action("Index","userchangepassword", new { Area = "User" })" style=" font-style:initial">CHANGE PASSWORD</a></li>   
                         </ul>
                     </li>
-
-                    <li><a href="@Url.Action("register", "registration")">LOGOUT</a></li>
+                    <li><a href="@Url.Action("Index", "Home" , new { Area = "" })">LOGOUT</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="rows" style="height:100px;background-color:#3366cc;width:100%">
         <div class="col-md-4" style="color:whitesmoke;margin-top:15px;text-align:center">
-            <h3><a href="~/Areas/Admin/Controllers/levelreportController.cs">DASHBOARD</a></h3>
+            <h3>@ViewBag.sectionName</h3>
         </div>
         <div class="col-md-4" style="color:whitesmoke;margin-top:20px;text-align:center">
-            <h4><b>Welcome {{}}</b></h4>
+            <h4><b>Welcome  @TempData["userName"]</b></h4>
         </div>
         <div class="col-md-4" style="color:whitesmoke;margin-top:20px;text-align:center">
             <h5><b>User ID : </b>@TempData["userId"]</h5>
@@ -266,10 +265,8 @@
 
     
     <!-- //footer -->
-    <div class="copy-right" style="">
-        <div class="container" style="">
-            <p>© 2016 Smart bazaar . All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts.</a></p>
-        </div>
+    <div class="container" style="">
+        <p>© 2017 Enkred Signal India Mart . All rights reserved | Design by <a href="#">Enkred Signal India Mart</a></p>
     </div>
 </body>
 </html>

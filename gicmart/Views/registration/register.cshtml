@@ -43,9 +43,9 @@
         <div class="col-md-4">@Html.LabelFor(Model => Model.sponsorid, htmlAttributes: new { @class = "control-label" })</div>
         </div>
     <div class="row">
-        <div  class="col-md-4"> @Html.TextBoxFor(Model => Model.userid, new { @class="form-control",required = "required" })</div>
+        <div  class="col-md-4"> @Html.TextBoxFor(Model => Model.userid, new { @class="form-control", @readonly = "readonly"})</div>
         <div class="col-md-2"></div>
-        <div class="col-md-4">@Html.TextBoxFor(Model => Model.sponsorid, new { @class = "form-control", @id = "txt_spnsorId" })</div>
+        <div class="col-md-4">@Html.TextBoxFor(Model => Model.sponsorid, new { @class = "form-control", @id = "txt_spnsorId", required = "required" })</div>
     </div>
     <div class="row" style="margin-top:2% !important">
         <div class="col-md-4">@Html.LabelFor(Model => Model.pin, htmlAttributes: new { @class = "control-label" })</div>
@@ -53,7 +53,7 @@
         <div class="col-md-4">@Html.LabelFor(Model => Model.sponsorname, htmlAttributes: new { @class = "control-label" })</div>
     </div>
     <div class="row">
-        <div class="col-md-4">@Html.TextBoxFor(Model => Model.pin, new { @class = "form-control",@id="txt_pinId" })</div>
+        <div class="col-md-4">@Html.TextBoxFor(Model => Model.pin, new { @class = "form-control",@id="txt_pinId", required = "required" })</div>
         <div class="col-md-2"></div>
         <div class="col-md-4">  @Html.TextBoxFor(Model => Model.sponsorname, new { @class="form-control", @readonly = "readonly", @id = "txt_spnsorName" })</div>
     </div>
@@ -76,7 +76,7 @@
         <div class="col-md-4">@Html.LabelFor(Model => Model.pancardno, htmlAttributes: new { @class = "control-label" })</div>
     </div>
     <div class="row">
-        <div class="col-md-4">@Html.TextBoxFor(Model => Model.password, new { @class = "form-control" })</div>
+        <div class="col-md-4">@Html.TextBoxFor(Model => Model.password, new { @class = "form-control", required = "required" })</div>
         <div class="col-md-2"></div>
         <div class="col-md-4"> @Html.TextBoxFor(Model => Model.pancardno, new { @class = "form-control" })</div>
     </div>
@@ -86,7 +86,7 @@
         <div class="col-md-4">@Html.LabelFor(Model => Model.address, htmlAttributes: new { @class = "control-label" })</div>
     </div>
     <div class="row">
-        <div class="col-md-4">@Html.TextBoxFor(Model => Model.nomineename, new { @class = "form-control" })</div>
+        <div class="col-md-4">@Html.TextBoxFor(Model => Model.nomineename, new { @class = "form-control", required = "required" })</div>
         <div class="col-md-2"></div>
         <div class="col-md-4"> @Html.TextBoxFor(Model => Model.address, new { @class = "form-control" })</div>
     </div>
@@ -104,8 +104,24 @@
           <div class="form-group">
              <label><input required type="checkbox"> Term & Condition</label><br /><br />
              <button type="submit" class="btn btn-default" style="margin-left:400px">Submit</button>
+              <button type="reset" class="btn btn-default" style="margin-left:400px">Submit</button>
           </div>
         </div> 
+
+
+
+    <div style="margin-left:100px;font-size:19px !important" id="div_text">Login Information</div>
+
+    <div class="row" style="margin-top:6% !important">
+        <div class="col-md-4">@Html.LabelFor(Model => Model.loginName, htmlAttributes: new { @class = "control-label" })</div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">@Html.LabelFor(Model => Model.loginPassword, htmlAttributes: new { @class = "control-label" })</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">@Html.TextBoxFor(Model => Model.loginName, new { @class = "form-control" , @readonly = "readonly" , @Value = @ViewBag.loginValue })</div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">@Html.TextBoxFor(Model => Model.loginPassword, new { @class = "form-control", @readonly = "readonly", @Value = @ViewBag.loginPassword })</div>
+    </div>
 </div>
 }
 <script type="text/javascript">
@@ -169,4 +185,4 @@
 
         });
     });
-</script>);
+</script>

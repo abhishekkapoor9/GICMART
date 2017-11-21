@@ -11,10 +11,10 @@ namespace gicmart.Models
         [Display(Name = "User Id")]
         //[Required]
  
-        [Required]
+        //[Required]
         public string userid { get; set; }//userid
         //[Display(Name = " sponsor id")]
-        //[Required]
+        [Required]
         public string sponsorid { get; set; }//sponsorid
         [Display(Name = "Sponsor Name")]
         [Required]
@@ -28,10 +28,11 @@ namespace gicmart.Models
         public string name { get; set; }//name
         public string mobileno { get; set; }//mobileno
         [Display(Name = "Password")]
-        [Required]
+    
         public string password { get; set; }
         [Display(Name = "Pan Card No ")]
         public string pancardno { get; set; }
+        [Required]
         [Display(Name = "Nominee Name")]
         public string nomineename { get; set; }
         [Display(Name = "Address")]
@@ -43,9 +44,12 @@ namespace gicmart.Models
         [Required]
         [Display(Name = "Term And Condition")]
         public bool termandcondition
-        {
-            get; set;
+        {get; set;}
 
-        }
+        [Display(Name = "Login ID")]
+        public string loginName{get; set;}
+
+        [Display(Name = "Login Password")]
+        public string loginPassword { get; set; }
     }
 }
