@@ -168,6 +168,7 @@
     <Compile Include="Areas\Admin\Controllers\dashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\levelreportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LogoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\myrepurchageController.cs" />
     <Compile Include="Areas\Admin\Controllers\mysponsorController.cs" />
     <Compile Include="Areas\Admin\Controllers\pinController.cs" />
@@ -176,8 +177,10 @@
     <Compile Include="Areas\Admin\Controllers\rewardController.cs" />
     <Compile Include="Areas\Admin\Controllers\sponsorlevelController.cs" />
     <Compile Include="Areas\Admin\Controllers\welletterController.cs" />
+    <Compile Include="Areas\Admin\Filters\SessionExpireAttribute.cs" />
     <Compile Include="Areas\Admin\Models\changepw.cs" />
     <Compile Include="Areas\Admin\Models\profile.cs" />
+    <Compile Include="Areas\User\Controllers\LogoutController.cs" />
     <Compile Include="Areas\User\Controllers\userchangepasswordController.cs" />
     <Compile Include="Areas\User\Controllers\userdashboardController.cs" />
     <Compile Include="Areas\User\Controllers\userlevelreportController.cs" />
@@ -187,6 +190,7 @@
     <Compile Include="Areas\User\Controllers\userrewardController.cs" />
     <Compile Include="Areas\User\Controllers\usersponsorlevelController.cs" />
     <Compile Include="Areas\User\Controllers\userwelcomeletterController.cs" />
+    <Compile Include="Areas\User\Filters\SessionExpireAttribute.cs" />
     <Compile Include="Areas\User\Models\userprofile.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />

@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using gicmart.Models;
+using gicmart.Areas.Admin.Filters;
 
 namespace gicmart.Areas.User.Controllers
 {
@@ -20,7 +21,7 @@ namespace gicmart.Areas.User.Controllers
         }
         //
         // GET: /User/userdashboard/
-
+        [SessionExpire]
         public ActionResult Index()
         {
             List<images> imagelst = new List<images>();

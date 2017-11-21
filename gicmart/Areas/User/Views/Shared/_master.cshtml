@@ -236,7 +236,7 @@
                             <li><a href="@Url.Action("Index","userchangepassword", new { Area = "User" })" style=" font-style:initial">CHANGE PASSWORD</a></li>   
                         </ul>
                     </li>
-                    <li><a href="@Url.Action("Index", "Home" , new { Area = "" })">LOGOUT</a></li>
+                    <li><a href="@Url.Action("Index", "Logout")">LOGOUT</a></li>
                 </ul>
             </div>
         </div>
@@ -262,11 +262,12 @@
             @RenderBody()
         </section>
     </div>
-
     
     <!-- //footer -->
-    <div class="container" style="">
-        <p>© 2017 Enkred Signal India Mart . All rights reserved | Design by <a href="#">Enkred Signal India Mart</a></p>
+    <div class="copy-right" style="">
+        <div class="container" style="">
+            <p>© 2017 Enkred Signal India Mart . All rights reserved | Design by <a href="#">Enkred Signal India Mart</a></p>
+        </div>
     </div>
 </body>
 </html>
