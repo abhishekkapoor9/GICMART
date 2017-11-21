@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gicmart.Areas.Admin.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,6 +8,7 @@ using System.Web.Security;
 
 namespace gicmart.Areas.User.Controllers
 {
+    [SessionExpire]
     public class LogoutController : Controller
     {
         //

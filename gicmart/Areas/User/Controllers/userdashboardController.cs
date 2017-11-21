@@ -11,6 +11,7 @@ using gicmart.Areas.Admin.Filters;
 
 namespace gicmart.Areas.User.Controllers
 {
+    [SessionExpire]
     public class userdashboardController : Controller
     {
         public class images

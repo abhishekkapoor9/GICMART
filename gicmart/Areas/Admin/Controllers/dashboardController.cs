@@ -11,6 +11,7 @@ using gicmart.Areas.Admin.Filters;
 
 namespace gicmart.Areas.Admin.Controllers
 {
+    [SessionExpire]
     public class dashboardController : Controller
     {
         public class images
@@ -21,7 +22,7 @@ namespace gicmart.Areas.Admin.Controllers
         }
         //
         // GET: /Admin/dashboard/
-        [SessionExpire]
+      
         public ActionResult Index()
         {
             List<images> imagelst = new List<images>();

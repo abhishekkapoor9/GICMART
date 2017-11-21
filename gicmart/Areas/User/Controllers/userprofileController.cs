@@ -8,9 +8,11 @@ using System.Data.SqlClient;
 using System.Configuration;
 using gicmart.Models;
 using gicmart.Areas.User.Models;
+using gicmart.Areas.Admin.Filters;
 
 namespace gicmart.Areas.User.Controllers
 {
+    [SessionExpire]
     public class userprofileController : Controller
     {
         //

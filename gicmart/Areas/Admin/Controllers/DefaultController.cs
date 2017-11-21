@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace gicmart.Areas.Admin.Controllers
 {
+    [SessionExpire]
     public class DefaultController : Controller
     {
         //

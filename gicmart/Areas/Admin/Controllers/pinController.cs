@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gicmart.Areas.Admin.Filters;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Web.Mvc;
 
 namespace gicmart.Areas.Admin.Controllers
 {
+    [SessionExpire]
     public class pinclass
     {
         public string sno { get; set; }

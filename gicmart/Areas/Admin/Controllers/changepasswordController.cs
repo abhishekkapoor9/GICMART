@@ -6,9 +6,11 @@ using System.Web.Mvc;
 using System.Data.EntityClient;
 using System.Data;
 using gicmart.Models;
+using gicmart.Areas.Admin.Filters;
 
 namespace gicmart.Areas.Admin.Controllers
 {
+    [SessionExpire]
     public class changepasswordController : Controller
     {
         //
