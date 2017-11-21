@@ -43,7 +43,17 @@ namespace gicmart.Areas.User.Controllers
                 {
                     profileinfo = new userprofile
                     {
-                        sponsorid = rdr["sponsor_id"].ToString()
+                        sponsorid = rdr["sponsor_id"].ToString(),
+                        userid= rdr["user_id"].ToString(),
+                        pin= rdr["pin_no"].ToString(),
+                        city= rdr["city"].ToString(),
+                        pancardno= rdr["pancardno"].ToString(),
+                        state= rdr["state"].ToString(),
+                        nominee = rdr["nomineename"].ToString(),
+                        address= rdr["address"].ToString(),
+                        name= rdr["name"].ToString(),
+                        mobileno= rdr["mobileno"].ToString(),
+                        password = rdr["user_pw"].ToString(),
                     };
                 }
                 rdr.Close();
