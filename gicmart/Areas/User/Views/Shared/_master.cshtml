@@ -209,12 +209,14 @@
             <!-- header-three -->
             <div class="container" style="padding: 0px; margin-left: 4%; width: 94%;">
                 <div class="header-logo">
-                    <h1><a href="@Url.Action("Index", "userdashboard", new { Area = "User" })"><span>E</span>nkred Signal India <i>Mart</i></a></h1>
+                    <h1><a href="@Url.Action("Index", "userdashboard", new { Area = "User" })"><span>E</span>nkred India <i>Mart</i></a></h1>
                     <h6>Enkred Signal India Mart.</h6>
                 </div>
                 <ul class="menu cf" style="z-index: 9999">
                     <li><a href="@Url.Action("Index", "userdashboard")">Home</a></li>
-                    <li style="z-index: 9999"><a href="@Url.Action("#","#")">PIN POINT DETAILS</a></li>
+                    <li style="z-index: 9999"><a href="@Url.Action("#","#")">PIN POINT DETAILS</a>
+                        
+                    </li>
 
                     <li style="z-index: 9999"><a href="@Url.Action("", "")">MY TEAM</a>
                        <ul class="submenu" style="z-index: 9999">
@@ -225,7 +227,12 @@
                         </ul>
                     </li>
 
-                    <li><a href="@Url.Action("Index", "userreward", new { Area = "User" })">E-PIN</a></li>
+                    <li><a href="@Url.Action("", "")">E-PIN</a>
+                        <ul class="submenu" style="z-index: 9999">
+                            <li><a href="@Url.Action("newPin", "pin",new { Area = "User" })">Generate Pin</a></li>
+                            <li><a href="@Url.Action("unUsedPin", "pin",new { Area = "User" })" style=" font-style:initial">Old Pin</a></li>
+                            <li><a href="@Url.Action("usePin","pin",new { Area = "User" })" style="font-style:initial">New Pin</a></li>
+                        </ul></li>
                     <li><a href="@Url.Action("Index", "userreward", new { Area = "User" })">REWARDS</a></li>
 
                     <li style="z-index: 9999"><a href="@Url.Action("", "")">ACCOUNT</a>

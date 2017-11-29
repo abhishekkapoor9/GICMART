@@ -222,15 +222,16 @@
                         <ul class="submenu" style="z-index: 9999">
                             <li><a href="@Url.Action("Index", "levelreport")">NON WORKING LEVEL</a></li>
                             <li><a href="@Url.Action("Index", "myrepurchage")">MY RE-JOIN ENTRY</a></li>
-                            <li><a href="@Url.Action("Index", "mysponsor")" style=" font-style:initial">MY SPONSOR</a></li>
-                            <li><a href="@Url.Action("Index", "sponsorlevel")" style=" font-style:initial">GENERATION</a></li>
+                            <li><a href="@Url.Action("Index", "mysponsor")" style="font-style:initial">MY SPONSOR</a></li>
+                            <li><a href="@Url.Action("Index", "sponsorlevel")" style="font-style:initial">GENERATION</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="@Url.Action("", "")">E-PIN</a>
+                    <li  style="z-index: 9999">
+                        <a href="@Url.Action("", "")">E-PIN</a>
                         <ul class="submenu" style="z-index: 9999">
                             <li><a href="@Url.Action("newPin", "pin")">Generate Pin</a></li>
-                            <li><a href="@Url.Action("unUsedPin", "pin")" style=" font-style:initial">Old Pin</a></li>
+                            <li><a href="@Url.Action("unUsedPin", "pin")" style="font-style:initial">Old Pin</a></li>
                             <li><a href="@Url.Action("usePin","pin")" style="font-style:initial">New Pin</a></li>
                         </ul>
                     </li>
@@ -239,10 +240,10 @@
                     <li style="z-index: 9999">
                         <a href="@Url.Action("", "")">ACCOUNT</a>
                         <ul class="submenu" style="z-index: 9999">
-                            <li><a href="@Url.Action("Index", "welletter")">WELECOME LETTER</a></li>
+                            <li><a href="@Url.Action("Index", "welletter")" style="z-index: 9999">WELECOME LETTER</a></li>
                             @*<li><a href="@Url.Action("Index", "myrepurchage")">ACCOUNT SETTING</a></li>*@
-                            <li><a href="@Url.Action("Index", "profile")" style=" font-style:initial">PROFILE</a></li>
-                            <li><a href="@Url.Action("Index","changepassword")" style=" font-style:initial">CHANGE PASSWORD</a></li>
+                            <li><a href="@Url.Action("Index", "profile")" style="font-style:initial">PROFILE</a></li>
+                            <li><a href="@Url.Action("Index","changepassword")" style="font-style:initial">CHANGE PASSWORD</a></li>
                         </ul>
                     </li>
 

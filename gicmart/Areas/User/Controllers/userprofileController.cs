@@ -26,7 +26,7 @@ namespace gicmart.Areas.User.Controllers
 
             TempData["userId"] = System.Web.HttpContext.Current.Session["userId"];
             TempData["userName"] = System.Web.HttpContext.Current.Session["userName"];
-            ViewBag.sectionName = "Dashboard";
+            ViewBag.sectionName = "User Profile";
             string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
             SqlConnection con = new SqlConnection(cs);
             con.Open();

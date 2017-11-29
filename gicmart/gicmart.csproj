@@ -191,7 +191,9 @@
     <Compile Include="Areas\User\Controllers\usersponsorlevelController.cs" />
     <Compile Include="Areas\User\Controllers\userwelcomeletterController.cs" />
     <Compile Include="Areas\User\Filters\SessionExpireAttribute.cs" />
+    <Compile Include="Areas\User\Models\changePassword.cs" />
     <Compile Include="Areas\User\Models\userprofile.cs" />
+    <Compile Include="Areas\User\pinController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\businessplanController.cs" />
@@ -419,6 +421,9 @@
     <Content Include="Areas\User\Views\usersponsorlevel\Index.cshtml" />
     <Content Include="Areas\User\Views\userwelcomeletter\Index.cshtml" />
     <Content Include="Areas\User\Views\Shared\_master.cshtml" />
+    <Content Include="Areas\User\Views\pin\newPin.cshtml" />
+    <Content Include="Areas\User\Views\pin\unUsedPin.cshtml" />
+    <Content Include="Areas\User\Views\pin\usedPin.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -530,9 +535,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\login\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\changepassword\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\changepassword\Index.cshtml" />
