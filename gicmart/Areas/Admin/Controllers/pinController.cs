@@ -50,7 +50,7 @@ namespace gicmart.Areas.Admin.Controllers
             SqlCommand cmd10 = new SqlCommand(userPin, con);
             cmd10.CommandType = CommandType.StoredProcedure;
             cmd10.Parameters.AddWithValue("@updatedpin_no", "testing");
-            cmd10.Parameters.AddWithValue("@userdId", "ESI0001061");
+            cmd10.Parameters.AddWithValue("@userdId", System.Web.HttpContext.Current.Session["userId"]);
             cmd10.Parameters.AddWithValue("@pin_no", pinNo);
 
             int w10 = cmd10.ExecuteNonQuery();
@@ -85,7 +85,7 @@ namespace gicmart.Areas.Admin.Controllers
             con.Open();
             string pinsp = "user_pin_sp";
             SqlCommand cmd11 = new SqlCommand(pinsp, con);
-            cmd11.Parameters.AddWithValue("@user_id", "ESI0001061");
+            cmd11.Parameters.AddWithValue("@user_id", System.Web.HttpContext.Current.Session["userId"]);
             cmd11.CommandType = CommandType.StoredProcedure;
             try
             {
@@ -137,7 +137,7 @@ namespace gicmart.Areas.Admin.Controllers
             con.Open();
             string pinsp = "sp_getPins";
             SqlCommand cmd11 = new SqlCommand(pinsp, con);
-            cmd11.Parameters.AddWithValue("@user_id", "ESI0001061");
+            cmd11.Parameters.AddWithValue("@user_id", System.Web.HttpContext.Current.Session["userId"]);
             cmd11.Parameters.AddWithValue("@intCode", 0);
             cmd11.CommandType = CommandType.StoredProcedure;
             try
@@ -197,7 +197,7 @@ namespace gicmart.Areas.Admin.Controllers
             con.Open();
             string pinsp = "sp_getPins";
             SqlCommand cmd11 = new SqlCommand(pinsp, con);
-            cmd11.Parameters.AddWithValue("@user_id", "ESI0001061");
+            cmd11.Parameters.AddWithValue("@user_id", System.Web.HttpContext.Current.Session["userId"]);
             cmd11.Parameters.AddWithValue("@intCode",1 );
             cmd11.CommandType = CommandType.StoredProcedure;
             try

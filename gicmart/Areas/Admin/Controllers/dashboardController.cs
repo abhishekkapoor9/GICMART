@@ -36,11 +36,11 @@ namespace gicmart.Areas.Admin.Controllers
             string usersp2 = "sp_getclientList";
             SqlCommand cmd4 = new SqlCommand(usersp2, con);
             cmd4.CommandType = CommandType.StoredProcedure;
-            
+
             cmd4.Parameters.AddWithValue("@empid", System.Web.HttpContext.Current.Session["userId"]);
             cmd4.Parameters.AddWithValue("@assigneddatetime", Convert.ToDateTime(System.Web.HttpContext.Current.Session["joindate"]));
-            cmd4.ExecuteNonQuery(); // MISSING
-                                    //getting reference_user_Id
+            //cmd4.ExecuteNonQuery(); // MISSING
+            //getting reference_user_Id
             try
             {
                 rdr = cmd4.ExecuteReader();
@@ -49,18 +49,19 @@ namespace gicmart.Areas.Admin.Controllers
                 {
                     imagelst.Add(new images
                     {
-                        id = rdr["[user_id]"].ToString(),
-                        name = rdr["[name]"].ToString(),
-                        joindate = rdr["[assignedDate]"].ToString()
+                        id = rdr["user_id"].ToString(),
+                        name = rdr["name"].ToString(),
+                        joindate = rdr["assignedDate"].ToString()
 
                     });
                 }
+                ViewBag.clientlist = imagelst;
             }
             catch (Exception e1)
             {
                 //reference_user_id = null;
             }
-                rdr.Close();
+            rdr.Close();
             return View();
         }
     }

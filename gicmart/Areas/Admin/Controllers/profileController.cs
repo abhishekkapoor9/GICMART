@@ -7,8 +7,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using gicmart.Models;
-using gicmart.Areas.User.Models;
 using gicmart.Areas.Admin.Filters;
+using gicmart.Areas.Admin.Models;
 
 namespace gicmart.Areas.Admin.Controllers
 {
@@ -20,9 +20,9 @@ namespace gicmart.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            List<userprofile> imagelst = new List<userprofile>();
+            List<profile> imagelst = new List<profile>();
             SqlDataReader rdr = null;
-            var profileinfo = new userprofile();
+            var profileinfo = new profile();
 
             TempData["userId"] = System.Web.HttpContext.Current.Session["userId"];
             TempData["userName"] = System.Web.HttpContext.Current.Session["userName"];
@@ -43,7 +43,7 @@ namespace gicmart.Areas.Admin.Controllers
                 // iterate through results, printing each to console
                 while (rdr.Read())
                 {
-                    profileinfo = new userprofile
+                    profileinfo = new profile
                     {
                         sponsorid = rdr["sponsor_id"].ToString(),
                         userid = rdr["user_id"].ToString(),
@@ -73,9 +73,9 @@ namespace gicmart.Areas.Admin.Controllers
             return View(profileinfo);
         }
         [HttpPost]
-        public ActionResult Index(userprofile model)
+        public ActionResult Index(profile model)
         {
-            var profileinfo = new userprofile();
+            var profileinfo = new profile();
             SqlDataReader rdr = null;
             string cs = ConfigurationManager.ConnectionStrings["cs"].ConnectionString;
             SqlConnection con = new SqlConnection(cs);
@@ -105,7 +105,7 @@ namespace gicmart.Areas.Admin.Controllers
                 // iterate through results, printing each to console
                 while (rdr.Read())
                 {
-                    profileinfo = new userprofile
+                    profileinfo = new profile
                     {
                         sponsorid = rdr["sponsor_id"].ToString(),
                         userid = rdr["user_id"].ToString(),

@@ -29,8 +29,8 @@ namespace gicmart.Controllers
         public ViewResult contactus(gicmart.Models.contactus obj)
         {  
             if (ModelState.IsValid) {  
-                MailMessage mail = new MailMessage();  
-                mail.To.Add("rk.singh9646@gmail.com");  
+                MailMessage mail = new MailMessage();
+                mail.To.Add("esimonlin1@gmail.com");  
                 mail.From = new MailAddress(obj.email);  
                 mail.Subject = "enquery";  
                 string Body = obj.message;  
@@ -39,8 +39,8 @@ namespace gicmart.Controllers
                 SmtpClient smtp = new SmtpClient();  
                 smtp.Host = "smtp.gmail.com";  
                 smtp.Port = 587;  
-                smtp.UseDefaultCredentials = false;  
-                smtp.Credentials = new System.Net.NetworkCredential("rk.singh9646@gmail.com", "10904070"); // Enter seders User name and password  
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new System.Net.NetworkCredential("esimonlin1@gmail.com", "esimonlin123"); // Enter seders User name and password  
                 smtp.EnableSsl = true;  
                 smtp.Send(mail);  
                 return View("contactus", obj);  
