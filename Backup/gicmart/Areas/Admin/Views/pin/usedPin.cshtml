@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "usedPin";
+    Layout = "~/Areas/Admin/Views/Shared/_master.cshtml";
+}
+<link href="~/Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" />
+@*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<br />
+<section style="height:650px!important">
+    <div class="col-sm-12">
+        <div class="widget-box transparent">
+
+            <div class="widget-body">
+                <table id="jqGrid_getPin"></table>
+                <div id="jqControls_getPin"></div>
+            </div><!-- /.widget-body -->
+        </div>
+    </div>
+    </section>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/jquery.jqGrid.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#jqGrid_getPin").jqGrid({
+                url: 'GetusedPin',
+                datatype: 'json',
+                mtype: 'Get',
+                colNames: ['SNo', 'PinNo', 'AssignedDate'],
+                colModel: [
+                    { key: true, hidden: true, name: 'userpinId', index: 'userpinId', editable: true },
+                    { key: false, name: 'pinNo', index: 'pinNo', editable: true },
+                    { key: false, name: 'assignedDate', index: 'assignedDate', editable: true }
+                ],
+                pager: jQuery('#jqControls_getPin'),
+                rowNum: 10,
+                rowList: [10, 20, 30, 40, 50],
+                height: '100%',
+                viewrecords: true,
+                caption: 'Pin Records',
+                emptyrecords: 'No Pin Records are Available to Display',
+                jsonReader: {
+                    root: "rows",
+                    page: "page",
+                    total: "total",
+                    records: "records",
+                    repeatitems: false,
+                    Id: "0"
+                },
+                autowidth: true,
+                multiselect: false
+            }).navGrid('#jqControls_getPin', { edit: false, add: false, del: false, search: false, refresh: true },
+               {}, {}, {}, {}, {}
+               );
+        });
+    </script>

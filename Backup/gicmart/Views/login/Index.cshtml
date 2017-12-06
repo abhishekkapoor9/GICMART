@@ -1,0 +1,52 @@
+﻿@model gicmart.Models.login
+@{
+    ViewBag.Title = "login";
+
+    Layout = "~/Views/Shared/_master.cshtml";
+}
+
+<div style="background-color:steelblue; width:118%;height:100px;margin-left:-105px;margin-right:0px">
+    @*<div style="float:left;height:100px;padding:40px"><h4 style="color:lightskyblue">business plan</h4></div>*@
+ <div style="float:left;color:white;padding:40px;height:100px"><h4><a href="@Url.Action("registration", "registration")" style="color:white">Registration</a></h4></div>
+    <div style="float:right;padding-right:100px;color:white;height:100px">
+       <div style="float:left;color:white;padding:0px;height:100px;margin-top:40px"><h4><a href="@Url.Action("index", "home")" style="color:lightskyblue">Home</a></h4></div>
+       <div style="float:left;color:white;padding:10px;height:100px;margin-top:30px"><h4><a href="@Url.Action("Index", "login")" style="color:lightskyblue">Login</a></h4></div>     
+    </div>
+ </div>
+<br />
+@using (Html.BeginForm("login", "login", FormMethod.Post))
+{
+    if (ViewBag.Message == "Success")
+    {
+        <div class="alert alert-success fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Success!</strong> Successfully Login In.
+        </div>
+    }
+
+    if (ViewBag.Message == "Fail")
+    {
+        <div class="alert alert-danger fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Error!</strong>  Error in Login.
+        </div>
+    }
+<div class="panel panel-default" style="margin-right:25%;margin-left:25%">
+    <div style="margin-left:0%;margin-top:0%">
+    <div class="row" style="text-align:center;background-color:#006699;width:100%;margin-left:0px;color:white"><h2><b>LOGIN</b></h2></div>
+    <br />
+          <div class="form-group" style="width:100%">
+            <label for="email">User ID:</label>
+              @Html.TextBoxFor(m => m.userName, new { @class="form-control", @id = "txt_userId" })
+            @*<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">*@
+          </div>
+          <div class="form-group"  style="width:100%">
+           <label for="pwd">Password:</label>
+           @*<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">*@
+              @Html.TextBoxFor(m => m.userPassword, new { @class = "form-control", @id = "txt_userpass" })
+          </div>
+     <button type="submit" class="btn btn-default" style="margin-left:15%">Submit</button>
+     <button type="reset" class="btn btn-default" style="margin-left:15%">Reset</button>
+    </div>
+</div>
+}

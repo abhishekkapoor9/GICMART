@@ -1,0 +1,53 @@
+﻿@model gicmart.Models.contactus  
+@{
+    ViewBag.Title = "contactus";
+    Layout = "~/Views/Shared/_master.cshtml";
+}
+
+<div style="background-color:steelblue;width:118%;height:100px;margin-left:-105px;margin-right:0px">
+     <div style="float:left;color:white;padding:40px;height:100px"><h4><a href="@Url.Action("contactus", "contactus")" style="color:whitesmoke">Contact Us</a></h4></div>
+     <div style="float:right;padding-right:100px;color:white;height:100px">
+          <div style="float:left;color:white;padding:0px;height:100px;margin-top:40px"><h4><a href="@Url.Action("index", "home")" style="color:lightskyblue">Home</a></h4></div>
+          <div style="float:right;color:white;padding:10px;height:100px;margin-top:30px"><h4><a href="@Url.Action("contactus", "contactus")" style="color:lightskyblue">Contact Us</a></h4></div>     
+     </div>
+</div>
+@using (Html.BeginForm("contactus", "contactus", FormMethod.Post))
+{
+<div class="container">
+    <div class="row">
+        <div class="col-md-8" style="height:auto">
+            
+                <br /><br />
+                <div class="form-group" style="width:100%">
+                      <label for="email">Name:</label>
+                      @Html.TextBoxFor(m => m.name, new { @class="form-control",required = "required" })
+                </div>
+                <div class="form-group"  style="width:100%">
+                     <label for="email">Email:</label>
+                     @Html.TextBoxFor(m => m.email, new { @class="form-control",required = "required" })
+                </div>
+                <div class="form-group" style="width:100%">
+                     <label for="phoneno">Phoneno:</label>
+                     @Html.TextBoxFor(m => m.name, new { @class="form-control",required = "required" })
+                </div>
+                <div class="form-group"  style="width:100%">
+                     <label for="message">Message:</label>
+                     @Html.TextBoxFor(m => m.message, new { @class="form-control",required = "required" })
+                </div>
+                <button type="submit" class="btn btn-default" style="margin-left:150px;background-color:darkblue;color:white">Send Message</button>
+        </div>
+        <div class="col-md-4" style="height:auto">
+           <br /><br />
+            <div class="holdingInfo patternbg">
+			   <h3>Get in touch</h3>
+              <p style="font-size:14px;text-align:justify">Please Write To us using the contact form  if you would like to know more about   GIKMART opportunity, share ideas,give feedback,or would like to request a call back</p>
+              <ul>
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>  A-209,<br/> Signature 2 Business Park<br/>B/H Hotel Sabar, Sarkhej-Sanand Chokdi<br/>Sarkhej, Ahmedabad-380007  </li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i> 07966173536</li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@gikmart.net">info@gikmart.net</a> </li>
+              </ul>
+            </div>
+        </div>     
+    </div>
+</div>
+}

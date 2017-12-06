@@ -1,0 +1,280 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>GIC MART</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/scripts")
+    <style type="text/css">
+        /* Clearing floats */
+        .cf:before,
+        .cf:after {
+            content: " ";
+            display: table;
+        }
+        .cf:after {
+            clear: both;
+        }
+        .cf {
+            *zoom: 1;
+        }
+        /* Mini reset, no margins, paddings or bullets */
+        .menu,
+        .submenu {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* Main level */
+        .menu {
+          margin: 24px auto;
+    margin-left: auto;
+width: 100%;/*800px*/
+width: -moz-fit-content;
+width: -webkit-fit-content;
+width: fit-content;
+margin-left: 4%;
+        }
+            .menu > li {
+                background: #34495e;
+                float: left;
+                position: relative;
+                transform: skewX(0deg);/*25*/
+            }
+            .menu a {
+                display: block;
+                color: #fff;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-family: Arial, Helvetica;
+                font-size: 14px;
+            }
+            .menu li:hover {
+                background: #e74c3c;
+            }
+            .menu > li > a {
+                transform: skewX(0deg);/*-25*/
+                padding: 1em 2em;
+            }
+        /* Dropdown */
+        .submenu {
+            position: absolute;
+            width: 200px;
+            left: 50%;
+            margin-left: -100px;
+            transform: skewX(0deg);/*-25*/
+            transform-origin: left top;
+        }
+            .submenu li {
+                background-color: #34495e;
+                position: relative;
+                overflow: hidden;
+            }
+            .submenu > li > a {
+                padding: 1em 2em;
+            }
+            .submenu > li::after {
+                content: '';
+                position: absolute;
+                top: -125%;
+                height: 100%;
+                width: 100%;
+                box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+            }
+            /* Odd stuff */
+            .submenu > li:nth-child(odd) {
+                transform: skewX(0deg) translateX(0);/*-25*/
+            }
+                .submenu > li:nth-child(odd) > a {
+                    transform: skewX(0deg);/*25*/
+                }
+                .submenu > li:nth-child(odd)::after {
+                    right: -50%;
+                    transform: skewX(0deg) rotate(0deg);/*-25 3*/
+                }
+            /* Even stuff */
+            .submenu > li:nth-child(even) {
+                transform: skewX(0deg) translateX(0);/*25*/
+            }
+
+                .submenu > li:nth-child(even) > a {
+                    transform: skewX(deg);/*-25*/
+                }
+
+                .submenu > li:nth-child(even)::after {
+                    left: -50%;
+                    transform: skewX(0deg) rotate(0deg);/*25 3*/
+                }
+
+            /* Show dropdown */
+            .submenu,
+            .submenu li {
+                opacity: 0;
+                visibility: hidden;
+            }
+                .submenu li {
+                    transition: .2s ease transform;
+                }
+
+        .menu > li:hover .submenu,
+        .menu > li:hover .submenu li {
+            opacity: 1;
+            visibility: visible;
+        }
+            .menu > li:hover .submenu li:nth-child(even) {
+                transform: skewX(25deg) translateX(15px);/*25 15*/
+            }
+
+            .menu > li:hover .submenu li:nth-child(odd) {
+                transform: skewX(0deg) translateX(0px);/*-25 -15*/
+            }
+    </style>
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+    <!-- web-fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function() {
+        // Dock the header to the top of the window when scrolled past the banner. This is the default behaviour.
+        $('.header-two').scrollToFixed();
+        // previous summary up the page.
+        var summaries = $('.summary');
+        summaries.each(function(i) {
+            var summary = $(summaries[i]);
+            var next = summaries[i + 1];
+            summary.scrollToFixed({
+                marginTop: $('.header-two').outerHeight(true) + 10,
+                zIndex: 999
+            });
+        });
+    });
+    </script>
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script type="text/javascript">
+		$(document).ready(function() {
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+			$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+    </script>
+    <!-- //smooth-scrolling-of-move-up -->
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <div class="header-three">
+            <!-- header-three -->
+            <div class="container" style="padding: 0px;margin-left: 4%;width: 94%;"> 
+                <div class="header-logo">
+                    <<h1><a href="@Url.Action("Index", "Home", new { Area = "" })"><span>E</span>nkred <i>Mart</i></a></h1>
+                    <h6>Enkred Signal India Mart.</h6>
+                </div>
+                <ul class="menu cf" style="z-index:9999">
+                    <li><a href="@Url.Action("index", "home")">Home</a></li>
+                    <li style="z-index:9999"><a href="">About Us</a>
+                        <ul class="submenu" style="z-index:9999">
+                            <li><a href="@Url.Action("mybusinessplan", "businessplan")">Business Plan</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("gallery", "gallery")">Gallery</a></li>
+                    <li><a href="@Url.Action("gallery", "gallery")">Product Gallery</a></li>
+                    <li><a href="@Url.Action("contactus", "contactus")">Contact Us</a></li>
+                    <li><a href="@Url.Action("Index", "login")">Login</a></li>
+                    <li><a href="@Url.Action("register", "registration")">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+@RenderBody()
+        </div>
+    <!-- //header -->
+    <!-- banner -->
+    <!-- //subscribe -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-info w3-agileits-info">
+                <div class="col-md-4 address-left agileinfo">
+                    <div class="footer-logo header-logo">
+                        <<h1><a href="@Url.Action("Index", "Home", new { Area = "" })"><span>E</span>nkred <i>Mart</i></a></h1>
+                        <h6>Enkred Signal India Mart.</h6>
+                    </div>
+                    <ul>
+                        <li><i class="fa fa-map-marker"></i> Address.</li>
+                        <li><i class="fa fa-mobile"></i> 2332423432 </li>
+                        <li><i class="fa fa-phone"></i> 322312324 </li>
+                        <li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@iss.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-8 address-right">
+                    <div class="col-md-4 footer-grids">
+                        <h3>Company</h3>
+                        <ul><li><a href="@Url.Action("index", "Home")">Home</a></li>
+                            <li><a href="@Url.Action("About", "Home")">About Us</a></li>
+                            <li><a href="@Url.Action("register", "registration")">Registration</a></li>
+                            <li><a href="@Url.Action("contactus", "contactus")">Contact Us</a></li>
+                            <li><a href="@Url.Action("login", "login")">Login</a></li>
+                            
+                            <li><a href="@Url.Action("gallery", "gallery")">gallery</a></li>
+                            @*<li><a href="values.html">Core Values</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>*@
+                        </ul>
+                    </div>
+
+                    @*<div class="col-md-4 footer-grids">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="login.html">Order Status</a></li>
+                        </ul>
+                    </div>*@
+
+                   @* <div class="col-md-4 footer-grids">
+                        <h3>Payment Methods</h3>
+                        <ul>
+                            <li><i class="fa fa-laptop" aria-hidden="true"></i> Net Banking</li>
+                            <li><i class="fa fa-money" aria-hidden="true"></i> Cash On Delivery</li>
+                            <li><i class="fa fa-pie-chart" aria-hidden="true"></i>EMI Conversion</li>
+                            <li><i class="fa fa-gift" aria-hidden="true"></i> E-Gift Voucher</li>
+                            <li><i class="fa fa-credit-card" aria-hidden="true"></i> Debit/Credit Card</li>
+                        </ul>
+                    </div>*@
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- //footer -->
+    <div class="copy-right">
+        <div class="container" style="">
+            <p>© 2017 Enkred Signal India Mart . All rights reserved | Design by <a href="#">Enkred Signal India Mart</a></p>
+        </div>
+    </div>
+</body>
+</html>
