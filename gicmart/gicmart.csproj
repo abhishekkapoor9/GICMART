@@ -209,6 +209,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Controllers\myhomeController.cs" />
+    <Compile Include="Controllers\productgalleryController.cs" />
     <Compile Include="Controllers\registrationController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -367,6 +368,38 @@
     <Content Include="Images\plan.jpg" />
     <Content Include="Images\team_member2.png" />
     <Content Include="Images\wealth.jpg" />
+    <Content Include="product imgs\1250-1.png" />
+    <Content Include="product imgs\1250-hair.png" />
+    <Content Include="product imgs\1250.png" />
+    <Content Include="product imgs\1350-1.png" />
+    <Content Include="product imgs\1350.png" />
+    <Content Include="product imgs\1500-1.png" />
+    <Content Include="product imgs\1500-2.png" />
+    <Content Include="product imgs\1500.png" />
+    <Content Include="product imgs\1600.png" />
+    <Content Include="product imgs\1700.png" />
+    <Content Include="product imgs\1750.png" />
+    <Content Include="product imgs\1850-1.png" />
+    <Content Include="product imgs\1850-2.png" />
+    <Content Include="product imgs\1850-3.png" />
+    <Content Include="product imgs\1850-4.png" />
+    <Content Include="product imgs\1850-5.png" />
+    <Content Include="product imgs\1850-6.png" />
+    <Content Include="product imgs\1850-7.png" />
+    <Content Include="product imgs\1850.png" />
+    <Content Include="product imgs\ladywatch.png" />
+    <Content Include="product imgs\Minilesser.png" />
+    <Content Include="product imgs\Nova Hair Strenner.png" />
+    <Content Include="product imgs\oppo powerbank.png" />
+    <Content Include="product imgs\Samsung Powerbank.png" />
+    <Content Include="product imgs\sofa.png" />
+    <Content Include="product imgs\vivo powerbank.png" />
+    <Content Include="product imgs\watch-1.png" />
+    <Content Include="product imgs\watch-2.png" />
+    <Content Include="product imgs\watch-3.png" />
+    <Content Include="product imgs\watch-4.png" />
+    <Content Include="product imgs\watch-5.png" />
+    <Content Include="product imgs\watch.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\easing.js" />
@@ -478,6 +511,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\login\login.cshtml" />
+    <Content Include="Views\productgallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
