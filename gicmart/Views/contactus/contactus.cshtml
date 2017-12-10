@@ -13,6 +13,21 @@
 </div>
 @using (Html.BeginForm("contactus", "contactus", FormMethod.Post))
 {
+    if (ViewBag.Message == "Success")
+    {
+        <div class="alert alert-success fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Success!</strong> Mail Send Successfully.
+        </div>
+    }
+
+    if (ViewBag.Message == "Fail")
+    {
+        <div class="alert alert-danger fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Error!</strong>  Sending Mail
+            </div>//di
+    }
 <div class="container">
     <div class="row">
         <div class="col-md-8" style="height:auto">
@@ -42,9 +57,8 @@
 			   <h3>Get in touch</h3>
               <p style="font-size:14px;text-align:justify">Please Write To us using the contact form  if you would like to know more about   GIKMART opportunity, share ideas,give feedback,or would like to request a call back</p>
               <ul>
-                <li><i class="fa fa-map-marker" aria-hidden="true"></i>  A-209,<br/> Signature 2 Business Park<br/>B/H Hotel Sabar, Sarkhej-Sanand Chokdi<br/>Sarkhej, Ahmedabad-380007  </li>
-                <li><i class="fa fa-phone" aria-hidden="true"></i> 07966173536</li>
-                <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@gikmart.net">info@gikmart.net</a> </li>
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>  98/2 Near Park Plaza,<br/> Ring Road Marathalli Bangalore </li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@gikmart.net">esimonlin@gmail.com</a> </li>
               </ul>
             </div>
         </div>     
