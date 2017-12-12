@@ -1,0 +1,101 @@
+﻿@model gicmart.Models.users
+@{
+    ViewBag.Title = "newPin";
+    Layout = "~/Areas/User/Views/Shared/_master.cshtml";
+}
+<link href="~/Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" />
+@*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<br />
+<section>
+    <div class="row mar_gin" style="width:100%">
+        <div class="col-md-8 col-md-offset-2" style=" ">
+            <div id="basic-data" class="form-wizard active">
+                <br />
+                <h4 class="col-md-12"><b>Generate New Pin</b></h4><br /><br />
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Sponsor ID</label>
+                        <input type="text" placeholder="Pin No" readonly="readonly" value="" class="form-control" id="txt_pin_no">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="button" name="updateprofile" class="btn btn-primary" value="Generate No" id="btn_generate" />
+                    </div>
+                </div>
+                <br />
+                <div class="col-sm-12">
+                    <div class="widget-box transparent">
+
+                        <div class="widget-body">
+                            <table id="jqGrid_getPin"></table>
+                            <div id="jqControls_getPin"></div>
+                        </div><!-- /.widget-body -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/jquery.jqGrid.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btn_generate").click(function () {
+
+            $.ajax
+            ({
+                url: 'GetPinNo',
+                type: 'POST',
+                datatype: 'application/json',
+                rownumbers: true,
+                contentType: 'application/json',
+                success: function (result) {
+                    $("#txt_pin_no").val(result);
+                    $("#jqGrid_getPin").trigger("reloadGrid");
+                },
+                error: function (result) {
+                    alert("Whooaaa! Something went wrong..")
+                },
+            });
+
+        });
+        $("#jqGrid_getPin").jqGrid({
+            url: 'GetPin',
+            datatype: 'json',
+            mtype: 'Get',
+            colNames: ['SNo', 'PinNo', 'AssignedDate'],
+            colModel: [
+                { key: true, hidden: true, name: 'userpinId', index: 'userpinId', editable: true },
+                { key: false, name: 'pinNo', index: 'pinNo', editable: true },
+                { key: false, name: 'assignedDate', index: 'assignedDate', editable: true }
+            ],
+            pager: jQuery('#jqControls_getPin'),
+            rowNum: 10,
+            rowList: [10, 20, 30, 40, 50],
+            height: '100%',
+            viewrecords: true,
+            caption: 'Pin Records',
+            emptyrecords: 'No Pin Records are Available to Display',
+            jsonReader: {
+                root: "rows",
+                page: "page",
+                total: "total",
+                records: "records",
+                repeatitems: false,
+                Id: "0"
+            },
+            autowidth: true,
+            multiselect: false
+        }).navGrid('#jqControls_getPin', { edit: false, add: false, del: false, search: false, refresh: true },
+           {}, {}, {},{},{}
+           );
+    });
+</script>
+

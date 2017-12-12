@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "mybusinessplan";
+    Layout = "~/Views/Shared/_master.cshtml";
+}
+
+<div style="background-color:steelblue; width:1349px;height:100px;margin-left:-105px;margin-right:0px">
+    <div style="float:left;height:100px;padding:40px"><h4 style="color:whitesmoke">Business Plan</h4></div>
+    <div style="float:right;padding-right:100px;color:white;height:100px">
+       <div style="float:left;color:white;padding:0px;height:100px;margin-top:40px"><h4><a href="@Url.Action("index", "home")" style="color:lightskyblue">Home</a></h4></div>
+       <div style="float:right;color:white;padding:10px;height:100px;margin-top:30px"><h4><a href="@Url.Action("mybusinessplan", "businessplan")" style="color:lightskyblue">Business Plan</a></h4></div>     
+    </div>
+</div>
+<br />
+<div class="container" style="width:1200px;height:400px">
+    <div><h2><b>(1) Level Income</b></h2></div>
+     <div class="row" style="height:400px">
+          <div class="col-md-6" style="height:400px"> 
+              <img src="~/Images/plan.jpg" alt="" style="width:600px;height:400px" />
+          </div>
+
+          <div class="col-md-6" style="height:400px">
+             <table class="table table-bordered">
+              <tr style="background-color:olivedrab;color:azure">
+                  <th>Level</th>
+                  <th>Post</th>
+                  <th>Member</th>
+                  <th>Income</th>
+              </tr>
+              <tr> 
+                <td >1</td>
+                <td>director</td>
+                <td>75</td>
+                <td>45756</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>manager</td>
+                <td>554</td>
+                <td>45445</td>
+              </tr>
+             </table>
+          </div>
+     </div>
+</div>
+@* ----------------------------------------------------------------------------------------------------- *@
+<div class="container" style="width:1200px;height:400px">
+    <div style="color:green"><h2><b>(2) Sponsor Income = Rs. 200</b></h2></div>
+    <div><h2><b>(3) Reward</b></h2></div><br /><br />
+     <div class="row" style="height:400px">
+          @*<div class="col-sm-6" style="background-color:orange;height:400px"> 
+              <img src="~/Images/plan.jpg" alt="" style="width:600px;height:400px" />
+          </div>*@
+          <div style="height:400px;width:1100px;float:right;padding-right:200px">
+             <table class="table table-bordered" style="width:500px">
+              <tr style="background-color:olivedrab;color:azure">
+                  <th>Level</th>
+                  <th>Post</th>
+                  <th>Reward</th>
+                  <th>Member</th>
+              </tr>
+              <tr> 
+                <td >1</td>
+                <td>director</td>
+                <td><span class="img-responsive"><img src="~/Images/ivoltaa-dual-usb.jpeg" style="width:100px;height:100px"/></span></td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>manager</td>
+                <td style="width:100px;height:100px"><span class="img-responsive"><img src="~/Images/images.jpg" style="width:100px;height:100px"/></span></td>
+                <td>3</td>
+              </tr>
+             </table>
+          </div>
+     </div>
+</div>
+
+
+
+   

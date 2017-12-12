@@ -1,0 +1,335 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_master.cshtml";
+}
+<style type="text/css">
+    /* Clearing floats */
+    .cf:before,
+    .cf:after {
+        content: " ";
+        display: table;
+    }
+
+    .cf:after {
+        clear: both;
+    }
+
+    .cf {
+        *zoom: 1;
+    }
+
+    /* Mini reset, no margins, paddings or bullets */
+    .menu,
+    .submenu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* Main level */
+    .menu {
+        margin: 24px auto;
+        margin-left: auto;
+        width: 800px;
+        width: -moz-fit-content;
+        width: -webkit-fit-content;
+        width: fit-content;
+        margin-left: 4%;
+    }
+
+        .menu > li {
+            background: #34495e;
+            float: left;
+            position: relative;
+            transform: skewX(0deg);/*25*/
+        }
+
+        .menu a {
+            display: block;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: Arial, Helvetica;
+            font-size: 14px;
+        }
+
+        .menu li:hover {
+            background: #e74c3c;
+        }
+
+        .menu > li > a {
+            transform: skewX(0deg);/*-25*/
+            padding: 1em 2em;
+        }
+
+    /* Dropdown */
+    .submenu {
+        position: absolute;
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+        transform: skewX(0deg);/*-25*/
+        transform-origin: left top;
+    }
+
+        .submenu li {
+            background-color: #34495e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submenu > li > a {
+            padding: 1em 2em;
+        }
+
+        .submenu > li::after {
+            content: '';
+            position: absolute;
+            top: -125%;
+            height: 100%;
+            width: 100%;
+            box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+        }
+
+        /* Odd stuff */
+        .submenu > li:nth-child(odd) {
+            transform: skewX(0deg) translateX(0);/*-25*/
+        }
+
+            .submenu > li:nth-child(odd) > a {
+                transform: skewX(0deg);/*25*/
+            }
+
+            .submenu > li:nth-child(odd)::after {
+                right: -50%;
+                transform: skewX(0deg) rotate(0deg);/*-25 3*/
+            }
+
+        /* Even stuff */
+        .submenu > li:nth-child(even) {
+            transform: skewX(0deg) translateX(0);/*25*/
+        }
+
+            .submenu > li:nth-child(even) > a {
+                transform: skewX(0deg);/*-25*/
+            }
+
+            .submenu > li:nth-child(even)::after {
+                left: -50%;
+                transform: skewX(deg) rotate(0deg);/*25 3*/
+            }
+
+        /* Show dropdown */
+        .submenu,
+        .submenu li {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+            .submenu li {
+                transition: .2s ease transform;
+            }
+
+    .menu > li:hover .submenu,
+    .menu > li:hover .submenu li {
+        opacity: 1;
+        visibility: visible;
+    }
+        .menu > li:hover .submenu li:nth-child(even) {
+            transform: skewX(deg) translateX(px);/*25 15*/
+        }
+        .menu > li:hover .submenu li:nth-child(odd) {
+            transform: skewX(0deg) translateX(0px);/*-25 -15*/
+        }
+</style>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<!-- web-fonts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        // Dock the header to the top of the window when scrolled past the banner. This is the default behaviour.
+        $('.header-two').scrollToFixed();
+        // previous summary up the page.
+        var summaries = $('.summary');
+        summaries.each(function(i) {
+            var summary = $(summaries[i]);
+            var next = summaries[i + 1];
+            summary.scrollToFixed({
+                marginTop: $('.header-two').outerHeight(true) + 10,
+                zIndex: 999
+            });
+        });
+    });
+</script>
+<!-- start-smooth-scrolling -->
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!-- //end-smooth-scrolling -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+		$(document).ready(function() {
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+			$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<div class="banner">
+    <div id="kb" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel" data-interval="6000" data-pause="hover">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!-- Wrapper-for-Slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <!-- First-Slide -->
+                <img src="~/Images/2.jpg" alt="" class="img-responsive" />
+                <div class="carousel-caption kb_caption kb_caption_right">
+                    <h3 data-animation="animated flipInX">Flat <span>50%</span> Discount</h3>
+                    <h4 data-animation="animated flipInX">Hot Offer Today Only</h4>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Second-Slide -->
+                <img src="~/Images/4.jpg" alt="" class="img-responsive" />
+                <div class="carousel-caption kb_caption kb_caption_right">
+                    <h3 data-animation="animated fadeInDown">Our Latest Fashion Editorials</h3>
+                    <h4 data-animation="animated fadeInUp">cupidatat non proident</h4>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Third-Slide -->
+                <img src="~/Images/3.jpg" alt="" class="img-responsive" />
+                <div class="carousel-caption kb_caption kb_caption_center">
+                    <h3 data-animation="animated fadeInLeft">End Of Season Sale</h3>
+                    <h4 data-animation="animated flipInX">cupidatat non proident</h4>
+                </div>
+            </div>
+        </div>
+        <!-- Left-Button -->
+        <a class="left carousel-control kb_control_left" href="#kb" role="button" data-slide="prev">
+            <span class="fa fa-angle-left kb_icons" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <!-- Right-Button -->
+        <a class="right carousel-control kb_control_right" href="#kb" role="button" data-slide="next">
+            <span class="fa fa-angle-right kb_icons" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div class="">
+    <table class="table table-striped" style="text-align:center" >
+    @*<tr>
+        <th>
+             Wealth  
+        </th>
+        <th>
+         Health
+        </th>
+        <th>
+           Freedom 
+        </th>
+    </tr>*@
+    <tr>
+        <td style="width:200px;height:200px">
+            wealth
+         <img  src="~/Images/wealth.jpg" alt="wealth image" style="width:100%;height:100%" class="img-responsive"/>
+            <a href="#" rel="alternate">what is wealth? </a> 
+        </td>
+        <td style="width:200px;height:200px">
+            Health
+           <img  src="~/Images/Health.jpg" alt="health image" style="width:100%;height:100%" class="img-responsive"/>
+            <a href="#" rel="alternate">what is health? </a>
+        </td>
+        <td style="width:200px;height:200px">
+            Freedom
+            <img  src="~/Images/freedom.jpg" alt="freedom image" style="width:100%;height:100%" class="img-responsive"/>
+            <a href="#" rel="alternate">what is freedom? </a>
+        </td>
+    </tr>
+</table>
+</div>
+<!-- footer-top -->
+<div class="w3agile-ftr-top">
+    <div class="container">
+        <div class="ftr-toprow">
+            <div class="col-md-4 ftr-top-grids">
+                <div class="ftr-top-left">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <div class="ftr-top-right">
+                    <h4>FREE DELIVERY</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 ftr-top-grids">
+                <div class="ftr-top-left">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="ftr-top-right">
+                    <h4>CUSTOMER CARE</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-4 ftr-top-grids">
+                <div class="ftr-top-left">
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                </div>
+                <div class="ftr-top-right">
+                    <h4>GOOD QUALITY</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer-top -->
+<!-- subscribe -->
+<div class="subscribe">
+    <div class="container">
+        <div class="col-md-6 social-icons w3-agile-icons">
+            <h4>Keep in touch</h4>
+            <ul>
+                <li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
+                <li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
+                <li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
+                <li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
+                <li><a href="#" class="fa fa-rss icon rss"> </a></li>
+            </ul>
+            <ul class="apps">
+                <li><h4>Download Our app : </h4> </li>
+                <li><a href="#" class="fa fa-apple"></a></li>
+                <li><a href="#" class="fa fa-windows"></a></li>
+                <li><a href="#" class="fa fa-android"></a></li>
+            </ul>
+        </div>
+        <div class="col-md-6 subscribe-right">
+            <h4>Sign up for email and get 25%off!</h4>
+            <form action="#" method="post">
+                <input type="text" name="email" placeholder="Enter your Email..." required="">
+                <input type="submit" value="Subscribe">
+            </form>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>

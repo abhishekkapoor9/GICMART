@@ -1,0 +1,188 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_master.cshtml";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container" style="background-color:#3366cc;width:100%;height:100px">
+   
+</div>
+<!--page title end-->
+<br />
+<section class="content" style="">
+    <div class="row mar_gin" style="margin-right:20px">
+        <div class="col-md-12" style="margin-right:20px;margin-top:20px">
+            <div class="col-md-2 col-md-offset-2" style="">
+                <div class="table-responsive" style="">
+                    <table style="">
+                        @foreach (var stud in ViewBag.clientlist)
+                        {
+                            <tr>
+                                <td class="user">
+                                    <img src="~/Images/5.png" width="50" alt='UserName:@stud.name \n UserId:@stud.id' title='UserName: @stud.name \n UserId: @stud.id'  onmouseover="this.title = ' UserName: @stud.name \n UserId: @stud.id \n Join Date: @stud.joindate'" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center">
+                                    <span class="glyphicon glyphicon-arrow-down"></span>
+                                </td>
+                            </tr>
+                        }
+                        <tr>
+                            <td class="users">
+                                <img src="~/Images/6.png" width="50" alt="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">
+                                <span class="glyphicon glyphicon-arrow-down"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="users">
+                                <img src="~/Images/6.png" width="50" alt="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">
+                                <span class="glyphicon glyphicon-arrow-down"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="users">
+                                <img src="~/Images/6.png" width="50" alt="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">
+                                <span class="glyphicon glyphicon-arrow-down"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="users">
+                                <img src="~/Images/6.png" width="50" alt="" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="col-md-12" style="width:800px;margin-left:40px;margin-top:20px">
+                    <ul class="dash_box" style="list-style:none;margin-left:60px;color:white">
+                        <li style="text-align:center"><a href="@Url.Action("Index", "mysponsor")" style="color:whitesmoke;font-size:large;display:block;height:100px;width:210px;float:left;margin:8px;background-color:#0066ff">Direct Sponsors<br /> <span>0</span></a></li>
+                        <li style="text-align:center"><a href="@Url.Action("Index", "reward")" style="color:white;font-size:large;display:block;height:100px;width:210px;float:left;margin:8px;background-color:#0066ff">Rewards Sorry You are not elegable for Reward !</a></li>
+                        <li style="text-align:center"><a href="#" style="color:white;font-size:large;display:block;height:100px;width:210px;float:left;margin:8px;background-color:#0066ff;">Total Amount <br /> <span>0</span></a></li>
+                        <li class="dash" style="text-align:center"><a href="#" style="color:white;font-size:large;display:block;height:100px;width:210px;float:left;margin:8px;background-color:#0066ff;">You Are At Company's <span>5th Level</span></a></li>
+                        <li class="dash" style="text-align:center"><a href="#" style="color:white;font-size:large;display:block;height:100px;width:210px;float:left;margin:8px;background-color:#0066ff;">Special Re-Joining<br /> <span>0</span></a></li>
+                        <li class="dash" style="text-align:center"><a href="#" style="color:white;font-size:large;display:block;height:100px;width:210px;float:left;margin:8px;background-color:#0066ff;">Total Pool Amount <br /><span>96100</span></a></li>
+                        <!--<li><a href="mysponsor.php">Joining Level <span></span></a></li>-->
+                        <!--<li><a href="">Time Left  <p id="demo"></p> <span>-</span></a></li> -->
+                    </ul>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="s1 bisplan table-responsive">
+                        <table class="table table-bordered" style="margin-top:40px">
+                            <tbody>
+                                <tr style="color: #fff;font-weight: bold;font-size: 14px;background-color:olive">
+                                    <th>Level</th>
+                                    <th>Post</th>
+                                    <th>Member</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr style="color: #fff;font-weight: bold;font-size: 14px;	background:rgba(104, 138, 190, 1);">
+                                    <td>0</td>
+                                    <td>U</td>
+                                    <td>U</td>
+                                    <td>OK</td>
+                                </tr>
+                                <tr style="background:rgba(104, 138, 190, 1);color: #fff;font-weight: bold;font-size: 14px;">
+                                    <td>1</td>
+                                    <td>Referral</td>
+                                    <td>0</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr style="color: #fff;font-weight: bold;font-size: 14px;background: rgba(104, 138, 190, 1);">
+                                    <td>2</td>
+                                    <td>Executive</td>
+                                    <td>0</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr style="background: rgba(104, 138, 190, 1);color: #fff;font-weight: bold;font-size: 14px;">
+                                    <td>3</td>
+                                    <td>Sr.Executive</td>
+                                    <td>0</td>
+                                    <td>Pending</td>
+
+                                </tr>
+                                <tr style="color: #fff;font-weight: bold;font-size: 14px;background: rgba(106, 138, 187, 1);">
+                                    <td>4</td>
+                                    <td>Supervisor</td>
+                                    <td>0</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr style="background: #6E8BB6;color: #fff;font-weight: bold;font-size: 14px;">
+                                    <td>5</td>
+                                    <td>Manager</td>
+                                    <td>0</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr style="color: #fff;font-weight: bold;font-size: 14px;background: rgba(109, 136, 174, 1);">
+                                    <td>6</td>
+                                    <td>Sr.Manager</td>
+                                    <td>0</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr style="background: #6A84A8;color: #fff;font-weight: bold;font-size: 14px;">
+                                    <td>7</td>
+                                    <td>Regional Manager</td>
+                                    <td>0</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr style="color: #fff;font-weight: bold;font-size: 14px;background: rgba(110, 135, 169, 1);">
+                                    <td>8</td>
+                                    <td>Director</td>
+                                    <td>0</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr style="background:#708AAE;color: #fff;font-weight: bold;font-size: 14px;">
+                                    <td>9</td>
+                                    <td>President</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <script>
+
+                // Set the date we're counting down to
+                var countDownDate = new Date("June 21, 2017 15:05:00").getTime();
+                // Update the count down every 1 second
+                var x = setInterval(function () {
+                    // Get todays date and time
+                    var now = new Date().getTime();
+                    //  Find the distance between now an the count down date
+                    var distance = countDownDate - now;
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    // Output the result in an element with id="demo"
+                    document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                    // If the count down is over, write some text
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("demo").innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+            </script>
+        </div>
+    </div>
+</section>
+ss

@@ -1,0 +1,281 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Enkred India MART</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/scripts")
+    <style type="text/css">
+        /* Clearing floats */
+        .cf:before,
+        .cf:after {
+            content: " ";
+            display: table;
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        .cf {
+            *zoom: 1;
+        }
+
+        /* Mini reset, no margins, paddings or bullets */
+        .menu,
+        .submenu {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Main level */
+        .menu {
+            margin: 24px auto;
+            margin-left: auto;
+            width: 800px;
+            width: -moz-fit-content;
+            width: -webkit-fit-content;
+            width: fit-content;
+            margin-left: 4%;
+        }
+
+            .menu > li {
+                background: #34495e;
+                float: left;
+                position: relative;
+                transform: skewX(0deg);/*25*/
+            }
+
+            .menu a {
+                display: block;
+                color: #fff;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-family: Arial, Helvetica;
+                font-size: 14px;
+            }
+
+            .menu li:hover {
+                background: #e74c3c;
+            }
+
+            .menu > li > a {
+                transform: skewX(0deg);/*-25*/
+                padding: 1em 2em;
+            }
+
+        /* Dropdown */
+        .submenu {
+            position:absolute;
+            width: 220px;/*200*/
+            left:45%;/*50%*/
+            margin-left: -100px;
+            transform: skewX(0deg);/*-25*/
+            transform-origin: left top;
+        }
+
+            .submenu li {
+                background-color: #34495e;
+                position:relative;/*relative*/
+                overflow: hidden;
+            }
+
+            .submenu > li > a {
+                padding: 1em 1em;/*1,2*/
+            }
+            .submenu > li::after {
+                content: '';
+                position: absolute; /* absolute  */
+                top: -125%;
+                height: 100%;
+                width: 100%;
+                box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+            }
+
+            /* Odd stuff */
+            .submenu > li:nth-child(odd) {
+                transform: skewX(0deg) translateX(0);/*-25*/
+            }
+
+                .submenu > li:nth-child(odd) > a {
+                    transform: skewX(0deg);/*25*/
+                }
+
+                .submenu > li:nth-child(odd)::after {
+                    right: 0%;/*-50%*/
+                    transform: skewX(0deg) rotate(3deg); /*-25*/
+                }
+
+            /* Even stuff */
+            .submenu > li:nth-child(even) {
+                transform: skewX(0deg) translateX(0);/*25*/
+            }
+
+                .submenu > li:nth-child(even) > a {
+                    transform: skewX(0deg);/*-25*/
+                }
+
+                .submenu > li:nth-child(even)::after {
+                    left: 0%;/*-50%*/
+                    transform: skewX(0deg) rotate(3deg);/*25*/
+                }
+
+            /* Show dropdown */
+            .submenu,
+            .submenu li {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+                .submenu li {
+                    transition: .2s ease transform;
+                }
+
+        .menu > li:hover .submenu,
+        .menu > li:hover .submenu li {
+            opacity: 1;
+            visibility: visible;
+        }
+
+            .menu > li:hover .submenu li:nth-child(even) {
+                transform: skewX(0deg) translateX(0px);/*25*//*-15*/
+            }
+
+            .menu > li:hover .submenu li:nth-child(odd) {
+                transform: skewX(0deg) translateX(0px);/*-25*//*-15*/
+            }
+    </style>
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lovers+Quarrel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+    <!-- web-fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {          
+            $('.header-two').scrollToFixed();
+            // previous summary up the page.
+            var summaries = $('.summary');
+            summaries.each(function (i) {
+                var summary = $(summaries[i]);
+                var next = summaries[i + 1];
+
+                summary.scrollToFixed({
+                    marginTop: $('.header-two').outerHeight(true) + 10,
+                    zIndex: 999
+                });
+            });
+        });
+    </script>
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <div class="header-three">
+            <!-- header-three -->
+            <div class="container" style="padding: 0px; margin-left: 4%; width: 94%;">
+                <div class="header-logo">
+                    <h1><a href="@Url.Action("Index", "userdashboard", new { Area = "User" })"><span>E</span>nkred India <i>Mart</i></a></h1>
+                    <h6>Enkred Signal India Mart.</h6>
+                </div>
+                <ul class="menu cf" style="z-index: 9999">
+                    <li><a href="@Url.Action("Index", "userdashboard")">Home</a></li>
+                    <li style="z-index: 9999"><a href="@Url.Action("#","#")">PIN POINT DETAILS</a>
+                        
+                    </li>
+
+                    <li style="z-index: 9999"><a href="@Url.Action("", "")">MY TEAM</a>
+                       <ul class="submenu" style="z-index: 9999">
+                            <li><a href="@Url.Action("Index", "userlevelreport", new { Area = "User" })">NON WORKING LEVEL</a></li>
+                            <li><a href="@Url.Action("Index", "usermyrepurchage",new { Area = "User" }))">MY RE-JOIN ENTRY</a></li>
+                            <li><a href="@Url.Action("Index", "usermysponsor",new { Area = "User" }))" style=" font-style:initial">MY SPONSOR</a></li> 
+                            <li><a href="@Url.Action("Index", "usersponsorlevel",new { Area = "User" }))" style=" font-style:initial">GENERATION</a></li>   
+                        </ul>
+                    </li>
+
+                    <li><a href="@Url.Action("", "")">E-PIN</a>
+                        <ul class="submenu" style="z-index: 9999">
+                            <li><a href="@Url.Action("newPin", "pin",new { Area = "User" })">Generate Pin</a></li>
+                            <li><a href="@Url.Action("unUsedPin", "pin",new { Area = "User" })" style=" font-style:initial">Old Pin</a></li>
+                            <li><a href="@Url.Action("usedPin","pin",new { Area = "User" })" style="font-style:initial">New Pin</a></li>
+                        </ul></li>
+                    <li><a href="@Url.Action("Index", "userreward", new { Area = "User" })">REWARDS</a></li>
+
+                    <li style="z-index: 9999"><a href="@Url.Action("", "")">ACCOUNT</a>
+                         <ul class="submenu" style="z-index: 9999">
+                            <li><a href="@Url.Action("Index", "userwelcomeletter", new { Area = "User" })">WELECOME LETTER</a></li>
+                            @*<li><a href="@Url.Action("Index", "myrepurchage")">ACCOUNT SETTING</a></li>*@
+                            <li><a href="@Url.Action("Index", "userprofile", new { Area = "User" })" style=" font-style:initial">PROFILE</a></li>                                      
+                            <li><a href="@Url.Action("Index","userchangepassword", new { Area = "User" })" style=" font-style:initial">CHANGE PASSWORD</a></li>   
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("Index", "Logout")">LOGOUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="rows" style="height:100px;background-color:#3366cc;width:100%">
+        <div class="col-md-4" style="color:whitesmoke;margin-top:15px;text-align:center">
+            <h3>@ViewBag.sectionName</h3>
+        </div>
+        <div class="col-md-4" style="color:whitesmoke;margin-top:20px;text-align:center">
+            <h4><b>Welcome  @TempData["userName"]</b></h4>
+        </div>
+        <div class="col-md-4" style="color:whitesmoke;margin-top:20px;text-align:center">
+            <h5><b>User ID : </b>@TempData["userId"]</h5>
+        </div>
+    </div>
+    <div class="container">
+        @*@RenderBody()*@
+    </div>
+   
+    <div id="body" style="height: auto">
+        @RenderSection("body", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    
+    <!-- //footer -->
+    <div class="copy-right" style="">
+        <div class="container" style="">
+            <p>© 2017 Enkred Signal India Mart . All rights reserved | Design by <a href="#">Enkred Signal India Mart</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
