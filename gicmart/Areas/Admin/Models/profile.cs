@@ -26,6 +26,7 @@ namespace gicmart.Areas.Admin.Models
         public string profilepic { get; set; }
 
         public string lastupdateon { get; set; }
+        public string searchId { get; set; }
 
     }
 }

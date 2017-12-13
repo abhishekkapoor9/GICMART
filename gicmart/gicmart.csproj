@@ -181,6 +181,7 @@
     <Compile Include="Areas\Admin\Controllers\pindetailsController.cs" />
     <Compile Include="Areas\Admin\Controllers\profileController.cs" />
     <Compile Include="Areas\Admin\Controllers\rewardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SearchByIdController.cs" />
     <Compile Include="Areas\Admin\Controllers\sponsorlevelController.cs" />
     <Compile Include="Areas\Admin\Controllers\welletterController.cs" />
     <Compile Include="Areas\Admin\Filters\SessionExpireAttribute.cs" />
@@ -463,6 +464,7 @@
     <Content Include="Areas\User\Views\pin\newPin.cshtml" />
     <Content Include="Areas\User\Views\pin\unUsedPin.cshtml" />
     <Content Include="Areas\User\Views\pin\usedPin.cshtml" />
+    <Content Include="Areas\Admin\Views\SearchById\Index.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
